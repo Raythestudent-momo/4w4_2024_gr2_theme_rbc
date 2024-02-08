@@ -1,15 +1,14 @@
 * {
     margin : 0;
-    padding:0;
+    padding: 0;
 }
 
 body{
  display : flex;
  flex-direction : column;
  align-items: center;
- font-family: "prompt", sans-serif;
+ font-family: 'Titillium Web', sans-serif;
  background-color: var(--couleur-arriere-page);
- color: var(--couleur-texte);
 }
 
 .global {
@@ -21,8 +20,8 @@ body{
 .global > section,
 .global > header,
 .global > footer {
-    flex : 0 1 900px;
-    border : 1px solid #aaa;
+    flex : 0 1 1200px;
+    border : 3px ridge #9aa94c;
 }
 
 #entete{
@@ -32,17 +31,14 @@ body{
 #accueil{
     background-color: var(--couleur-arriere-accueil);
     width: var(--largeur-section);
-    align-self: flex-start;
 }
 #evenement{
     background-color: var(--couleur-arriere-evenement);
     width: var(--largeur-section);
-    align-self: flex-start;
 }
 #galerie{
     background-color: var(--couleur-arriere-galerie);
     width: var(--largeur-section);
-    align-self: flex-start;
 }
 #footer{
     background-color: var(--couleur-arriere-footer);

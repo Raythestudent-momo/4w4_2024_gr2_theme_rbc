@@ -1,12 +1,13 @@
 :root {
-    --couleur-arriere-page : rgba(0, 0, 0, 1);
-    --couleur-arriere-entete : #653cd698;
+    --couleur-arriere-page : rgba(0, 0, 0, 0.636);
+    --couleur-arriere-entete : rgba(101, 60, 214, 0.6);
     --couleur-arriere-accueil : rgba(55, 160, 107, 0.767);
     --couleur-arriere-evenement : rgba(10, 20, 110, 0.651);
     --couleur-arriere-galerie : rgba(170, 111, 43, 0.445);
     --couleur-arriere-footer : rgba(158, 0, 0, 0.664);
-    --couleur-texte : rgba(190, 190, 190, 0.879);
-    --largeur-header : 80vw;
+    --couleur-texte-header : rgba(190, 190, 190, 0.879);
+    --couleur-texte-sous-titre : rgba(237, 237, 237, 0.879);
+    --largeur-header : 100vw;
     --largeur-section : 60vw;
     --largeur-footer : 90vw;
 }
