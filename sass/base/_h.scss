@@ -13,8 +13,28 @@ h2{
    font-weight: 500;
    font-style: normal;
 }
-h3{}
-h4{}
-h5{}
-h6{}
-h7{}
+h3{
+   font-size: clamp(1rem, -1rem + 5vw, 3rem);
+   font-weight: 400;
+   font-style: normal;
+}
+h4{
+   font-size: clamp(0.75rem, -0.75rem + 4.25vw, 2.5rem);
+   font-weight: 300;
+   font-style: normal;
+}
+h5{
+   font-size: clamp(0.5rem, -0.5rem + 3.75vw, 2.25rem);
+   font-weight: 200;
+   font-style: normal;
+}
+h6{
+   font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
+   font-weight: 100;
+   font-style: normal;
+}
+h7{
+   font-size: clamp(0.2rem, -0.2rem + 3vw, 2.5rem);
+   font-weight: 100;
+   font-style: normal;
+}

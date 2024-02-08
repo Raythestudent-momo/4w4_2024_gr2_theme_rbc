@@ -13,11 +13,16 @@ Text Domain: theme-eddy
 https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 */
 :root {
+  --couleur-arriere-page: rgba(0, 0, 0, 1);
   --couleur-arriere-entete: #653cd698;
   --couleur-arriere-accueil: rgba(55, 160, 107, 0.767);
   --couleur-arriere-evenement: rgba(10, 20, 110, 0.651);
   --couleur-arriere-galerie: rgba(170, 111, 43, 0.445);
   --couleur-arriere-footer: rgba(158, 0, 0, 0.664);
+  --couleur-texte: rgba(190, 190, 190, 0.879);
+  --largeur-header: 80vw;
+  --largeur-section: 60vw;
+  --largeur-footer: 90vw;
 }
 
 * {
@@ -28,7 +33,10 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 body {
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-family: "prompt", sans-serif;
+  background-color: var(--couleur-arriere-page);
+  color: var(--couleur-texte);
 }
 
 .global {
@@ -46,22 +54,30 @@ body {
 
 #entete {
   background-color: var(--couleur-arriere-entete);
+  width: var(--largeur-header);
 }
 
 #accueil {
   background-color: var(--couleur-arriere-accueil);
+  width: var(--largeur-section);
+  align-self: flex-start;
 }
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
+  width: var(--largeur-section);
+  align-self: flex-start;
 }
 
 #galerie {
   background-color: var(--couleur-arriere-galerie);
+  width: var(--largeur-section);
+  align-self: flex-start;
 }
 
 #footer {
   background-color: var(--couleur-arriere-footer);
+  width: var(--largeur-footer);
 }
 
 /*
@@ -76,5 +92,35 @@ h1 {
 h2 {
   font-size: clamp(1.25rem, -1.3rem + 7.5vw, 3.75rem);
   font-weight: 500;
+  font-style: normal;
+}
+
+h3 {
+  font-size: clamp(1rem, -1rem + 5vw, 3rem);
+  font-weight: 400;
+  font-style: normal;
+}
+
+h4 {
+  font-size: clamp(0.75rem, -0.75rem + 4.25vw, 2.5rem);
+  font-weight: 300;
+  font-style: normal;
+}
+
+h5 {
+  font-size: clamp(0.5rem, -0.5rem + 3.75vw, 2.25rem);
+  font-weight: 200;
+  font-style: normal;
+}
+
+h6 {
+  font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
+  font-weight: 100;
+  font-style: normal;
+}
+
+h7 {
+  font-size: clamp(0.2rem, -0.2rem + 3vw, 2.5rem);
+  font-weight: 100;
   font-style: normal;
 }/*# sourceMappingURL=style.css.map */
