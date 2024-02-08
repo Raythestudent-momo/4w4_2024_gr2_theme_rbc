@@ -117,10 +117,4 @@ h6 {
   font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
   font-weight: 100;
   font-style: normal;
-}
-
-h7 {
-  font-size: clamp(0.2rem, -0.2rem + 3vw, 2.5rem);
-  font-weight: 100;
-  font-style: normal;
 }/*# sourceMappingURL=style.css.map */
