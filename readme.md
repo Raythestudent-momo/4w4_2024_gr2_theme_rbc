@@ -6,7 +6,7 @@
  - normalize.css
  - style.css
 
-À réalilser :
+À réaliser :
  - Compléter chacune des règles de style des éléments H
  - Changer les couleurs de background et des H
  - Améliorer le design général sans être trop spécifique
