@@ -1,13 +1,27 @@
 :root {
-    --couleur-arriere-page : rgba(0, 0, 0, 0.636);
-    --couleur-arriere-entete : rgba(101, 60, 214, 0.6);
-    --couleur-arriere-accueil : rgba(55, 160, 107, 0.767);
-    --couleur-arriere-evenement : rgba(10, 20, 110, 0.651);
-    --couleur-arriere-galerie : rgba(170, 111, 43, 0.445);
-    --couleur-arriere-footer : rgba(158, 0, 0, 0.664);
-    --couleur-texte-header : rgba(190, 190, 190, 0.879);
-    --couleur-texte-sous-titre : rgba(237, 237, 237, 0.879);
+    // --couleur-arriere-page : rgba(0, 0, 0, 0.636);
+    // --couleur-arriere-entete : rgba(101, 60, 214, 0.6);
+    // --couleur-arriere-accueil : rgba(55, 160, 107, 0.767);
+    // --couleur-arriere-evenement : rgba(10, 20, 110, 0.651);
+    // --couleur-arriere-galerie : rgba(170, 111, 43, 0.445);
+    // --couleur-arriere-footer : rgba(158, 0, 0, 0.664);
+    // --couleur-texte-header : rgba(190, 190, 190, 0.879);
+    // --couleur-texte-sous-titre : rgba(237, 237, 237, 0.879);
     --largeur-header : 100vw;
     --largeur-section : 60vw;
     --largeur-footer : 100vw;
+
+
+    --couleur-arriere-page : rgba(0, 0, 0, 0.636);
+    --couleur-arriere-entete : hsl(0, 100%, 50%);
+    --couleur-arriere-accueil : hsl(60, 100%, 50%);
+    --couleur-arriere-evenement : hsl(120, 100%, 50%);
+    --couleur-arriere-galerie : hsl(180, 100%, 50%);
+    --couleur-arriere-footer : hsl(240, 100%, 54%);
+
+    --couleur-entete : hsl(0, 100%, 10%);
+    --couleur-accueil : hsl(60, 100%, 10%);
+    --couleur-evenement : hsl(120, 100%, 10%);
+    --couleur-galerie : hsl(180, 100%, 10%);
+    --couleur-footer : hsl(240, 100%, 90%);
 }

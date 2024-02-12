@@ -26,21 +26,26 @@ body{
 
 #entete{
     background-color: var(--couleur-arriere-entete);
+    color: var(--couleur-entete);
     width: var(--largeur-header);
 }
 #accueil{
     background-color: var(--couleur-arriere-accueil);
+    color: var(--couleur-accueil);
     width: var(--largeur-section);
 }
 #evenement{
     background-color: var(--couleur-arriere-evenement);
+    color: var(--couleur-evenement);
     width: var(--largeur-section);
 }
 #galerie{
     background-color: var(--couleur-arriere-galerie);
+    color: var(--couleur-galerie);
     width: var(--largeur-section);
 }
 #footer{
     background-color: var(--couleur-arriere-footer);
+    color: var(--couleur-footer);
     width: var(--largeur-footer);
 }
