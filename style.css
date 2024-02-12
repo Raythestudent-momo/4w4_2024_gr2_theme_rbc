@@ -13,11 +13,17 @@ Text Domain: theme-eddy
 https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 */
 :root {
-  --couleur-arriere-entete: #653cd698;
+  --couleur-arriere-page: rgba(0, 0, 0, 0.636);
+  --couleur-arriere-entete: rgba(101, 60, 214, 0.6);
   --couleur-arriere-accueil: rgba(55, 160, 107, 0.767);
   --couleur-arriere-evenement: rgba(10, 20, 110, 0.651);
   --couleur-arriere-galerie: rgba(170, 111, 43, 0.445);
   --couleur-arriere-footer: rgba(158, 0, 0, 0.664);
+  --couleur-texte-header: rgba(190, 190, 190, 0.879);
+  --couleur-texte-sous-titre: rgba(237, 237, 237, 0.879);
+  --largeur-header: 100vw;
+  --largeur-section: 60vw;
+  --largeur-footer: 90vw;
 }
 
 * {
@@ -28,7 +34,9 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 body {
   display: flex;
   flex-direction: column;
-  font-family: "prompt", sans-serif;
+  align-items: center;
+  font-family: "Titillium Web", sans-serif;
+  background-color: var(--couleur-arriere-page);
 }
 
 .global {
@@ -40,28 +48,33 @@ body {
 .global > section,
 .global > header,
 .global > footer {
-  flex: 0 1 900px;
-  border: 1px solid #aaa;
+  flex: 0 1 1200px;
+  border: 3px ridge #9aa94c;
 }
 
 #entete {
   background-color: var(--couleur-arriere-entete);
+  width: var(--largeur-header);
 }
 
 #accueil {
   background-color: var(--couleur-arriere-accueil);
+  width: var(--largeur-section);
 }
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
+  width: var(--largeur-section);
 }
 
 #galerie {
   background-color: var(--couleur-arriere-galerie);
+  width: var(--largeur-section);
 }
 
 #footer {
   background-color: var(--couleur-arriere-footer);
+  width: var(--largeur-footer);
 }
 
 /*
@@ -71,10 +84,46 @@ h1 {
   font-size: clamp(1.5rem, -2.6rem + 13.5vw, 4rem);
   font-weight: 600;
   font-style: normal;
+  color: var(--couleur-texte-header);
+  padding: 2rem 1rem;
 }
 
 h2 {
   font-size: clamp(1.25rem, -1.3rem + 7.5vw, 3.75rem);
   font-weight: 500;
   font-style: normal;
+  color: var(--couleur-texte-sous-titre);
+  padding: 2rem 1rem;
+}
+
+h3 {
+  font-size: clamp(1rem, -1rem + 5vw, 3rem);
+  font-weight: 400;
+  font-style: normal;
+  color: var(--couleur-texte-sous-titre);
+  padding: 2rem 1rem;
+}
+
+h4 {
+  font-size: clamp(0.75rem, -0.75rem + 4.25vw, 2.5rem);
+  font-weight: 300;
+  font-style: normal;
+  color: var(--couleur-texte-sous-titre);
+  padding: 2rem 1rem;
+}
+
+h5 {
+  font-size: clamp(0.5rem, -0.5rem + 3.75vw, 2.25rem);
+  font-weight: 200;
+  font-style: normal;
+  color: var(--couleur-texte-sous-titre);
+  padding: 2rem 1rem;
+}
+
+h6 {
+  font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
+  font-weight: 100;
+  font-style: normal;
+  color: var(--couleur-texte-sous-titre);
+  padding: 2rem 1rem;
 }/*# sourceMappingURL=style.css.map */

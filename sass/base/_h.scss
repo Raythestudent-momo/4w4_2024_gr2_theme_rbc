@@ -6,15 +6,42 @@ h1{
    font-size : clamp(1.5rem, -2.6rem + 13.5vw, 4rem);
    font-weight: 600;
    font-style: normal;
+   color: var(--couleur-texte-header);
+   padding: 2rem 1rem;
 }
 
 h2{
    font-size: clamp(1.25rem, -1.3rem + 7.5vw, 3.75rem);
    font-weight: 500;
    font-style: normal;
+   color: var(--couleur-texte-sous-titre);
+   padding: 2rem 1rem;
 }
-h3{}
-h4{}
-h5{}
-h6{}
-h7{}
+h3{
+   font-size: clamp(1rem, -1rem + 5vw, 3rem);
+   font-weight: 400;
+   font-style: normal;
+   color: var(--couleur-texte-sous-titre);
+   padding: 2rem 1rem;
+}
+h4{
+   font-size: clamp(0.75rem, -0.75rem + 4.25vw, 2.5rem);
+   font-weight: 300;
+   font-style: normal;
+   color: var(--couleur-texte-sous-titre);
+   padding: 2rem 1rem;
+}
+h5{
+   font-size: clamp(0.5rem, -0.5rem + 3.75vw, 2.25rem);
+   font-weight: 200;
+   font-style: normal;
+   color: var(--couleur-texte-sous-titre);
+   padding: 2rem 1rem;
+}
+h6{
+   font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
+   font-weight: 100;
+   font-style: normal;
+   color: var(--couleur-texte-sous-titre);
+   padding: 2rem 1rem;
+}
