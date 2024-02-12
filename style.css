@@ -23,7 +23,7 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   --couleur-texte-sous-titre: rgba(237, 237, 237, 0.879);
   --largeur-header: 100vw;
   --largeur-section: 60vw;
-  --largeur-footer: 90vw;
+  --largeur-footer: 100vw;
 }
 
 * {
