@@ -14,11 +14,11 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 */
 :root {
   --largeur-header: 100vw;
-  --largeur-section: 60vw;
+  --largeur-section: 100vw;
   --largeur-footer: 100vw;
   --nb-element: 5;
   --increment-angle: calc(360/ var(--nb-element));
-  --angle-initial: 180;
+  --angle-initial: 230;
   /* couleur arrière-plan */
   --s-couleur-arriere: 100%;
   --l-couleur-arriere: 50%;
@@ -26,21 +26,33 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   --s-couleur: 100%;
   --l-couleur: 15%;
   --hu1: var(--angle-initial);
-  --hu2: calc(var(--hu1) + var(--increment-angle));
-  --hu3: calc(var(--hu2) + var(--increment-angle));
-  --hu4: calc(var(--hu3) + var(--increment-angle));
-  --hu5: calc(var(--hu4) + var(--increment-angle));
-  --couleur-arriere-page: rgba(0, 0, 0, 0.636);
-  --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), var(--l-couleur-arriere));
-  --couleur-arriere-accueil: hsl(var(--hu2), var(--s-couleur-arriere), var(--l-couleur-arriere));
-  --couleur-arriere-evenement: hsl(var(--hu3), var(--s-couleur-arriere), var(--l-couleur-arriere));
-  --couleur-arriere-galerie: hsl(var(--hu4), var(--s-couleur-arriere), var(--l-couleur-arriere));
-  --couleur-arriere-footer: hsl(var(--hu5), var(--s-couleur-arriere), var(--l-couleur-arriere));
+  --hu2: calc(var(--hu1) - 180);
+  /*
+      --hu2 : calc(var(--hu1) + var(--increment-angle));
+      --hu3 : calc(var(--hu2) + var(--increment-angle));
+      --hu4 : calc(var(--hu3) + var(--increment-angle));
+      --hu5 : calc(var(--hu4) + var(--increment-angle));
+
+
+
+      --couleur-arriere-page : rgba(0, 0, 0, 0.062);
+      --couleur-arriere-entete : hsl(var(--hu1), var(--s-couleur-arriere), var(--l-couleur-arriere));
+      --couleur-arriere-accueil : hsl(var(--hu2), var(--s-couleur-arriere), var(--l-couleur-arriere));
+      --couleur-arriere-evenement : hsl(var(--hu3), var(--s-couleur-arriere), var(--l-couleur-arriere));
+      --couleur-arriere-galerie : hsl(var(--hu4), var(--s-couleur-arriere), var(--l-couleur-arriere));
+      --couleur-arriere-footer : hsl(var(--hu5), var(--s-couleur-arriere), var(--l-couleur-arriere));
+  */
   --couleur-entete: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
-  --couleur-accueil: hsl(var(--hu2), var(--s-couleur), var(--l-couleur));
-  --couleur-evenement: hsl(var(--hu3), var(--s-couleur), var(--l-couleur));
-  --couleur-galerie: hsl(var(--hu4), var(--s-couleur), var(--l-couleur));
-  --couleur-footer: hsl(var(--hu5), var(--s-couleur), var(--l-couleur));
+  --couleur-accueil: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+  --couleur-evenement: hsl(var(--hu2), var(--s-couleur), var(--l-couleur));
+  --couleur-galerie: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+  --couleur-footer: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+  --couleur-arriere-page: rgba(0, 0, 0, 0.062);
+  --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), 60%);
+  --couleur-arriere-accueil: hsl(var(--hu1), var(--s-couleur-arriere), 65%);
+  --couleur-arriere-evenement: hsl(var(--hu2), var(--s-couleur-arriere), 70%);
+  --couleur-arriere-galerie: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
+  --couleur-arriere-footer: hsl(var(--hu1), var(--s-couleur-arriere), 80%);
 }
 
 * {
@@ -53,7 +65,6 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: "Titillium Web", sans-serif;
-  background-color: var(--couleur-arriere-page);
 }
 
 .global {
@@ -66,10 +77,10 @@ body {
 .global > header,
 .global > footer {
   flex: 0 1 100vw;
-  border: 3px ridge #9aa94c;
 }
 
 #entete {
+  position: relative;
   background-color: var(--couleur-arriere-entete);
   color: var(--couleur-entete);
   width: var(--largeur-header);
@@ -82,15 +93,18 @@ body {
 }
 
 #evenement {
-  background-color: var(--couleur-arriere-evenement);
+  position: relative;
+  background: linear-gradient(var(--couleur-arriere-accueil) 50%, var(--couleur-arriere-galerie) 50%);
   color: var(--couleur-evenement);
   width: var(--largeur-section);
+  z-index: 1;
 }
 
 #galerie {
   background-color: var(--couleur-arriere-galerie);
   color: var(--couleur-galerie);
   width: var(--largeur-section);
+  position: relative;
 }
 
 #footer {
@@ -106,40 +120,74 @@ h1 {
   font-size: clamp(1.5rem, -2.6rem + 13.5vw, 4rem);
   font-weight: 600;
   font-style: normal;
-  padding: 2rem 1rem;
+  padding: 5rem 1rem;
 }
 
 h2 {
   font-size: clamp(1.25rem, -1.3rem + 7.5vw, 3.75rem);
   font-weight: 500;
   font-style: normal;
-  padding: 2rem 1rem;
+  padding: 5rem 1rem;
 }
 
 h3 {
   font-size: clamp(1rem, -1rem + 5vw, 3rem);
   font-weight: 400;
   font-style: normal;
-  padding: 2rem 1rem;
+  padding: 5rem 1rem;
 }
 
 h4 {
   font-size: clamp(0.75rem, -0.75rem + 4.25vw, 2.5rem);
   font-weight: 300;
   font-style: normal;
-  padding: 2rem 1rem;
+  padding: 5rem 1rem;
 }
 
 h5 {
   font-size: clamp(0.5rem, -0.5rem + 3.75vw, 2.25rem);
   font-weight: 200;
   font-style: normal;
-  padding: 2rem 1rem;
+  padding: 5rem 1rem;
 }
 
 h6 {
   font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
   font-weight: 100;
   font-style: normal;
-  padding: 2rem 1rem;
+  padding: 5rem 1rem;
+}
+
+.vague {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 64px;
+}
+
+.diagonal {
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  transform: skewY(-5deg);
+  background-color: var(--couleur-arriere-evenement);
 }/*# sourceMappingURL=style.css.map */

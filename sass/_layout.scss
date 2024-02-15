@@ -8,7 +8,6 @@ body{
  flex-direction : column;
  align-items: center;
  font-family: 'Titillium Web', sans-serif;
- background-color: var(--couleur-arriere-page);
 }
 
 .global {
@@ -21,10 +20,10 @@ body{
 .global > header,
 .global > footer {
     flex : 0 1 100vw;
-    border : 3px ridge #9aa94c;
 }
 
 #entete{
+    position: relative;
     background-color: var(--couleur-arriere-entete);
     color: var(--couleur-entete);
     width: var(--largeur-header);
@@ -35,14 +34,17 @@ body{
     width: var(--largeur-section);
 }
 #evenement{
-    background-color: var(--couleur-arriere-evenement);
+    position: relative;
+    background: linear-gradient(var(--couleur-arriere-accueil) 50%, var(--couleur-arriere-galerie) 50%);
     color: var(--couleur-evenement);
     width: var(--largeur-section);
+    z-index: 1;
 }
 #galerie{
     background-color: var(--couleur-arriere-galerie);
     color: var(--couleur-galerie);
     width: var(--largeur-section);
+    position: relative;
 }
 #footer{
     background-color: var(--couleur-arriere-footer);
