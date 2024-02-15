@@ -1,4 +1,4 @@
-# Laboratoire #1
+# Laboratoire #2
 ## Introduction à Sass et révision HTML/CSS
 
 ### Concevoir une page de plusieurs sections qui contient ces éléments :
