@@ -1,20 +1,20 @@
-a {
+button {
     background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
     font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
     font-weight: 100;
     font-style: normal;
-    width: 20vw;
+    width: 10vw;
     margin-left: 10vw;
+    margin-bottom: 5vh;
 
     &:hover {
         background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
     }
 
-    &:focus {
+    &:active {
         background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 40%, var(--couleur-arriere-evenement));
     }
-
-    &:visited {
-        background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 20%, var(--couleur-arriere-accueil));
-    }
 }
+
+
+

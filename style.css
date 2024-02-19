@@ -70,7 +70,7 @@ body {
 .global {
   display: flex;
   justify-content: center;
-  min-height: 40vh;
+  min-height: 50vh;
 }
 
 .global > section,
@@ -113,6 +113,32 @@ body {
   width: var(--largeur-footer);
 }
 
+.entete__header {
+  background-image: url(images/Potato-High-Quality-PNG.png);
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+}
+
+.entete__header span {
+  display: block;
+}
+
+button {
+  background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
+  font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
+  font-weight: 100;
+  font-style: normal;
+  width: 10vw;
+  margin-left: 10vw;
+  margin-bottom: 5vh;
+}
+button:hover {
+  background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
+}
+button:active {
+  background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 40%, var(--couleur-arriere-evenement));
+}
+
 /*
 https://chrisburnell.com/clamp-calculator/
 */
@@ -120,42 +146,42 @@ h1 {
   font-size: clamp(1.5rem, -2.6rem + 13.5vw, 4rem);
   font-weight: 600;
   font-style: normal;
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
 }
 
 h2 {
   font-size: clamp(1.25rem, -1.3rem + 7.5vw, 3.75rem);
   font-weight: 500;
   font-style: normal;
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
 }
 
 h3 {
   font-size: clamp(1rem, -1rem + 5vw, 3rem);
   font-weight: 400;
   font-style: normal;
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
 }
 
 h4 {
   font-size: clamp(0.75rem, -0.75rem + 4.25vw, 2.5rem);
   font-weight: 300;
   font-style: normal;
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
 }
 
 h5 {
   font-size: clamp(0.5rem, -0.5rem + 3.75vw, 2.25rem);
   font-weight: 200;
   font-style: normal;
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
 }
 
 h6 {
   font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
   font-weight: 100;
   font-style: normal;
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
 }
 
 blockquote {
@@ -173,15 +199,14 @@ a {
   width: 20vw;
   margin-left: 10vw;
 }
-
-button {
-  background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
-  font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
-  font-weight: 100;
-  font-style: normal;
-  width: 10vw;
-  margin-left: 10vw;
-  margin-bottom: 5vh;
+a:hover {
+  background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
+}
+a:focus {
+  background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 40%, var(--couleur-arriere-evenement));
+}
+a:visited {
+  background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 20%, var(--couleur-arriere-accueil));
 }
 
 .vague {
