@@ -6,44 +6,44 @@ h1{
    font-size : clamp(1.5rem, -2.6rem + 13.5vw, 4rem);
    font-weight: 600;
    font-style: normal;
-   padding: 3rem 1rem;
+   margin: 5rem 10rem;
 }
 
 h2{
    font-size: clamp(1.25rem, -1.3rem + 7.5vw, 3.75rem);
    font-weight: 500;
    font-style: normal;
-   padding: 3rem 1rem;
+   margin: 5rem 10rem;
 }
 h3{
    font-size: clamp(1rem, -1rem + 5vw, 3rem);
    font-weight: 400;
    font-style: normal;
-   padding: 3rem 1rem;
+   margin: 5rem 10rem;
 }
 h4{
    font-size: clamp(0.75rem, -0.75rem + 4.25vw, 2.5rem);
    font-weight: 300;
    font-style: normal;
-   padding: 3rem 1rem;
+   margin: 5rem 10rem;
 }
 h5{
    font-size: clamp(0.5rem, -0.5rem + 3.75vw, 2.25rem);
    font-weight: 200;
    font-style: normal;
-   padding: 3rem 1rem;
+   margin: 5rem 10rem;
 }
 h6{
    font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
    font-weight: 100;
    font-style: normal;
-   padding: 3rem 1rem;
+   margin: 5rem 10rem;
 }
 
 blockquote {
    isolation: isolate;
    background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
-   width: 20vw;
-   padding-left: 10vw;
+   width: 40vw;
+   margin-left: 10rem;
 }
 

@@ -28,19 +28,10 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   --hu1: var(--angle-initial);
   --hu2: calc(var(--hu1) - 180);
   /*
-      --hu2 : calc(var(--hu1) + var(--increment-angle));
-      --hu3 : calc(var(--hu2) + var(--increment-angle));
-      --hu4 : calc(var(--hu3) + var(--increment-angle));
-      --hu5 : calc(var(--hu4) + var(--increment-angle));
-
-
-
-      --couleur-arriere-page : rgba(0, 0, 0, 0.062);
-      --couleur-arriere-entete : hsl(var(--hu1), var(--s-couleur-arriere), var(--l-couleur-arriere));
-      --couleur-arriere-accueil : hsl(var(--hu2), var(--s-couleur-arriere), var(--l-couleur-arriere));
-      --couleur-arriere-evenement : hsl(var(--hu3), var(--s-couleur-arriere), var(--l-couleur-arriere));
-      --couleur-arriere-galerie : hsl(var(--hu4), var(--s-couleur-arriere), var(--l-couleur-arriere));
-      --couleur-arriere-footer : hsl(var(--hu5), var(--s-couleur-arriere), var(--l-couleur-arriere));
+  --hu2 : calc(var(--hu1) + var(--increment-angle));
+  --hu3 : calc(var(--hu2) + var(--increment-angle));
+  --hu4 : calc(var(--hu3) + var(--increment-angle));
+  --hu5 : calc(var(--hu4) + var(--increment-angle));
   */
   --couleur-entete: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
   --couleur-accueil: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
@@ -63,20 +54,17 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
   font-family: "Titillium Web", sans-serif;
 }
 
 .global {
-  display: flex;
-  justify-content: center;
-  min-height: 50vh;
+  min-height: 70vh;
 }
 
 .global > section,
 .global > header,
 .global > footer {
-  flex: 0 1 100vw;
+  flex: 0 1 50vw;
 }
 
 #entete {
@@ -130,7 +118,7 @@ button {
   font-style: normal;
   width: 10vw;
   margin-left: 10vw;
-  margin-bottom: 5vh;
+  margin-bottom: 10vh;
 }
 button:hover {
   background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
@@ -146,49 +134,49 @@ h1 {
   font-size: clamp(1.5rem, -2.6rem + 13.5vw, 4rem);
   font-weight: 600;
   font-style: normal;
-  padding: 3rem 1rem;
+  margin: 5rem 10rem;
 }
 
 h2 {
   font-size: clamp(1.25rem, -1.3rem + 7.5vw, 3.75rem);
   font-weight: 500;
   font-style: normal;
-  padding: 3rem 1rem;
+  margin: 5rem 10rem;
 }
 
 h3 {
   font-size: clamp(1rem, -1rem + 5vw, 3rem);
   font-weight: 400;
   font-style: normal;
-  padding: 3rem 1rem;
+  margin: 5rem 10rem;
 }
 
 h4 {
   font-size: clamp(0.75rem, -0.75rem + 4.25vw, 2.5rem);
   font-weight: 300;
   font-style: normal;
-  padding: 3rem 1rem;
+  margin: 5rem 10rem;
 }
 
 h5 {
   font-size: clamp(0.5rem, -0.5rem + 3.75vw, 2.25rem);
   font-weight: 200;
   font-style: normal;
-  padding: 3rem 1rem;
+  margin: 5rem 10rem;
 }
 
 h6 {
   font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
   font-weight: 100;
   font-style: normal;
-  padding: 3rem 1rem;
+  margin: 5rem 10rem;
 }
 
 blockquote {
   isolation: isolate;
   background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
-  width: 20vw;
-  padding-left: 10vw;
+  width: 40vw;
+  margin-left: 10rem;
 }
 
 a {
