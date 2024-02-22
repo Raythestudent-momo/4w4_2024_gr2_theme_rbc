@@ -124,9 +124,7 @@ button.entete__button {
   font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
   font-weight: 300;
   font-style: normal;
-  width: 10vw;
-  margin-left: 10vw;
-  margin-bottom: 10vh;
+  min-width: 10vw;
 }
 button.entete__button:hover {
   background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
@@ -142,6 +140,7 @@ h1 {
   font-size: clamp(1.5rem, -2.6rem + 13.5vw, 4rem);
   font-weight: 600;
   font-style: normal;
+  text-shadow: 2px 4px 5px black;
 }
 
 h2 {
@@ -178,7 +177,6 @@ blockquote {
   isolation: isolate;
   background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
   width: 40vw;
-  margin-left: 10rem;
 }
 
 /*.a__section {
@@ -243,6 +241,9 @@ blockquote {
   display: block;
 }
 
+/*.recherche__button {
+
+}*/
 .sociaux {
   display: flex;
   justify-content: center;

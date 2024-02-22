@@ -3,9 +3,7 @@ button.entete__button {
     font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
     font-weight: 300;
     font-style: normal;
-    width: 10vw;
-    margin-left: 10vw;
-    margin-bottom: 10vh;
+    min-width: 10vw;
 
     &:hover {
         background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
