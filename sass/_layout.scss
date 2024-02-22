@@ -1,6 +1,7 @@
-* {
-    margin : 0;
-    padding: 0;
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 body{
@@ -10,41 +11,43 @@ body{
 }
 
 .global {
-    min-height : 70vh;
+    display: flex;
+    justify-content: center;
+    min-height : 30vh;
 }
 
 .global > section,
 .global > header,
 .global > footer {
-    flex : 0 1 50vw;
+    flex : 0 1 1100px;
+    padding: 5rem 1rem;
+}
+
+.global > header {
+    flex: 0 1 1300px;
 }
 
 #entete{
-    position: relative;
     background-color: var(--couleur-arriere-entete);
     color: var(--couleur-entete);
-    width: var(--largeur-header);
+    position: relative;
 }
 #accueil{
     background-color: var(--couleur-arriere-accueil);
     color: var(--couleur-accueil);
-    width: var(--largeur-section);
 }
 #evenement{
     position: relative;
     background: linear-gradient(var(--couleur-arriere-accueil) 50%, var(--couleur-arriere-galerie) 50%);
     color: var(--couleur-evenement);
-    width: var(--largeur-section);
     z-index: 1;
 }
 #galerie{
     background-color: var(--couleur-arriere-galerie);
     color: var(--couleur-galerie);
-    width: var(--largeur-section);
     position: relative;
 }
 #footer{
     background-color: var(--couleur-arriere-footer);
     color: var(--couleur-footer);
-    width: var(--largeur-footer);
 }

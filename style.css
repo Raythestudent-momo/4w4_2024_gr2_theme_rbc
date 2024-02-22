@@ -13,9 +13,6 @@ Text Domain: theme-eddy
 https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 */
 :root {
-  --largeur-header: 100vw;
-  --largeur-section: 100vw;
-  --largeur-footer: 100vw;
   --nb-element: 5;
   --increment-angle: calc(360/ var(--nb-element));
   --angle-initial: 230;
@@ -46,9 +43,10 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   --couleur-arriere-footer: hsl(var(--hu1), var(--s-couleur-arriere), 80%);
 }
 
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -58,51 +56,53 @@ body {
 }
 
 .global {
-  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  min-height: 30vh;
 }
 
 .global > section,
 .global > header,
 .global > footer {
-  flex: 0 1 50vw;
+  flex: 0 1 1100px;
+  padding: 5rem 1rem;
+}
+
+.global > header {
+  flex: 0 1 1300px;
 }
 
 #entete {
-  position: relative;
   background-color: var(--couleur-arriere-entete);
   color: var(--couleur-entete);
-  width: var(--largeur-header);
+  position: relative;
 }
 
 #accueil {
   background-color: var(--couleur-arriere-accueil);
   color: var(--couleur-accueil);
-  width: var(--largeur-section);
 }
 
 #evenement {
   position: relative;
   background: linear-gradient(var(--couleur-arriere-accueil) 50%, var(--couleur-arriere-galerie) 50%);
   color: var(--couleur-evenement);
-  width: var(--largeur-section);
   z-index: 1;
 }
 
 #galerie {
   background-color: var(--couleur-arriere-galerie);
   color: var(--couleur-galerie);
-  width: var(--largeur-section);
   position: relative;
 }
 
 #footer {
   background-color: var(--couleur-arriere-footer);
   color: var(--couleur-footer);
-  width: var(--largeur-footer);
 }
 
 .entete__header {
-  background-image: url(images/Potato-High-Quality-PNG.png);
+  background-image: url("images/Potato-High-Quality-PNG.png");
   background-repeat: no-repeat;
   background-position: 100% 50%;
 }
@@ -111,19 +111,27 @@ body {
   display: block;
 }
 
-button {
+.footer__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+button.entete__button {
   background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
   font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
-  font-weight: 100;
+  font-weight: 300;
   font-style: normal;
   width: 10vw;
   margin-left: 10vw;
   margin-bottom: 10vh;
 }
-button:hover {
+button.entete__button:hover {
   background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
 }
-button:active {
+button.entete__button:active {
   background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 40%, var(--couleur-arriere-evenement));
 }
 
@@ -134,42 +142,36 @@ h1 {
   font-size: clamp(1.5rem, -2.6rem + 13.5vw, 4rem);
   font-weight: 600;
   font-style: normal;
-  margin: 5rem 10rem;
 }
 
 h2 {
   font-size: clamp(1.25rem, -1.3rem + 7.5vw, 3.75rem);
   font-weight: 500;
   font-style: normal;
-  margin: 5rem 10rem;
 }
 
 h3 {
   font-size: clamp(1rem, -1rem + 5vw, 3rem);
   font-weight: 400;
   font-style: normal;
-  margin: 5rem 10rem;
 }
 
 h4 {
   font-size: clamp(0.75rem, -0.75rem + 4.25vw, 2.5rem);
   font-weight: 300;
   font-style: normal;
-  margin: 5rem 10rem;
 }
 
 h5 {
   font-size: clamp(0.5rem, -0.5rem + 3.75vw, 2.25rem);
   font-weight: 200;
   font-style: normal;
-  margin: 5rem 10rem;
 }
 
 h6 {
   font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
   font-weight: 100;
   font-style: normal;
-  margin: 5rem 10rem;
 }
 
 blockquote {
@@ -179,24 +181,24 @@ blockquote {
   margin-left: 10rem;
 }
 
-a {
-  background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
-  font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
-  font-weight: 100;
-  font-style: normal;
-  width: 20vw;
-  margin-left: 10vw;
-}
-a:hover {
-  background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
-}
-a:focus {
-  background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 40%, var(--couleur-arriere-evenement));
-}
-a:visited {
-  background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 20%, var(--couleur-arriere-accueil));
-}
+/*.a__section {
+    background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
+    font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
+    font-weight: 100;
+    font-style: normal;
 
+    &:hover {
+        background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
+    }
+
+    &:focus {
+        background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 40%, var(--couleur-arriere-evenement));
+    }
+
+    &:visited {
+        background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 20%, var(--couleur-arriere-accueil));
+    }
+}*/
 .vague {
   position: absolute;
   bottom: 0;
@@ -229,4 +231,24 @@ a:visited {
   z-index: -2;
   transform: skewY(-5deg);
   background-color: var(--couleur-arriere-evenement);
+}
+
+.recherche {
+  display: flex;
+  border: 1px ridge #aaa;
+  justify-content: center;
+}
+
+.recherche__input {
+  display: block;
+}
+
+.sociaux {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.sociaux > a > svg {
+  fill: var(--couleur-arriere-evenement);
 }/*# sourceMappingURL=style.css.map */

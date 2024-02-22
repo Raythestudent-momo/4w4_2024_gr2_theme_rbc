@@ -18,13 +18,14 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 @import "layout";
 
 @import "entete";
+@import "footer";
 
 @import "base/bouton";
-
 @import "base/h";
-
 @import "base/liens";
 
 @import "effet/vague";
-
 @import "effet/diagonal";
+
+@import "composant/recherche";
+@import "composant/sociaux";

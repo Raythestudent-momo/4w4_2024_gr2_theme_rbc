@@ -1,8 +1,4 @@
-:root {
-    --largeur-header : 100vw;
-    --largeur-section : 100vw;
-    --largeur-footer : 100vw;
-
+:root { 
     --nb-element : 5;
     --increment-angle : calc(360/ var(--nb-element));
     --angle-initial : 230;
