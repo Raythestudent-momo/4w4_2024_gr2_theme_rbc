@@ -196,24 +196,25 @@ h6 {
   font-style: normal;
 }
 
-/*.a__section {
-    background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
-    font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
-    font-weight: 100;
-    font-style: normal;
+.a__section {
+  color: black;
+  font-size: clamp(0.25rem, -0.25rem + 3.25vw, 0.5rem);
+  font-weight: 100;
+  font-style: normal;
+}
+.a__section:hover {
+  color: rebeccapurple;
+  font-size: clamp(0.25rem, -0.25rem + 3.25vw, 1rem);
+}
+.a__section:focus {
+  color: aqua;
+  font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
+}
+.a__section:visited {
+  color: black;
+  font-size: clamp(0.25rem, -0.25rem + 3.25vw, 1.5rem);
+}
 
-    &:hover {
-        background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
-    }
-
-    &:focus {
-        background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 40%, var(--couleur-arriere-evenement));
-    }
-
-    &:visited {
-        background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 20%, var(--couleur-arriere-accueil));
-    }
-}*/
 .vague {
   position: absolute;
   bottom: 0;
@@ -258,9 +259,10 @@ h6 {
   display: block;
 }
 
-/*.recherche__button {
+.recherche__button {
+  padding: 5px;
+}
 
-}*/
 .sociaux {
   display: flex;
   justify-content: center;

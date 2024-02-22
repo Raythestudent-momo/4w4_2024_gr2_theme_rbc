@@ -1,18 +1,21 @@
-/*.a__section {
-    background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
-    font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
+.a__section {
+    color: black;
+    font-size: clamp(0.25rem, -0.25rem + 3.25vw, .5rem);
     font-weight: 100;
     font-style: normal;
 
     &:hover {
-        background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
+        color : rebeccapurple;
+        font-size: clamp(0.25rem, -0.25rem + 3.25vw, 1rem);
     }
 
     &:focus {
-        background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 40%, var(--couleur-arriere-evenement));
+        color : aqua;
+        font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
     }
 
     &:visited {
-        background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 20%, var(--couleur-arriere-accueil));
+        color : black;
+        font-size: clamp(0.25rem, -0.25rem + 3.25vw, 1.5rem);
     }
-}*/
+}
