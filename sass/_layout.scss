@@ -27,6 +27,13 @@ body{
     flex: 0 1 1300px;
 }
 
+blockquote {
+    isolation: auto;
+    background: radial-gradient(var(--couleur-arriere-evenement) 50%, var(--couleur-arriere-accueil));
+    width: 40vw;
+    padding: 5px;
+}
+
 #entete{
     background-color: var(--couleur-arriere-entete);
     color: var(--couleur-entete);

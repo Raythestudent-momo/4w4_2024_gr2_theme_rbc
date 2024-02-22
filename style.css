@@ -72,6 +72,13 @@ body {
   flex: 0 1 1300px;
 }
 
+blockquote {
+  isolation: auto;
+  background: radial-gradient(var(--couleur-arriere-evenement) 50%, var(--couleur-arriere-accueil));
+  width: 40vw;
+  padding: 5px;
+}
+
 #entete {
   background-color: var(--couleur-arriere-entete);
   color: var(--couleur-entete);
@@ -122,14 +129,30 @@ body {
 button.entete__button {
   background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
   font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
-  font-weight: 300;
+  font-weight: 600;
   font-style: normal;
   min-width: 10vw;
+  padding: 5px;
 }
 button.entete__button:hover {
   background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
 }
 button.entete__button:active {
+  background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 40%, var(--couleur-arriere-evenement));
+}
+
+button.galerie__button {
+  background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
+  font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
+  font-weight: 600;
+  font-style: normal;
+  min-width: 10vw;
+  padding: 5px;
+}
+button.galerie__button:hover {
+  background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
+}
+button.galerie__button:active {
   background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 40%, var(--couleur-arriere-evenement));
 }
 
@@ -171,12 +194,6 @@ h6 {
   font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
   font-weight: 100;
   font-style: normal;
-}
-
-blockquote {
-  isolation: isolate;
-  background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
-  width: 40vw;
 }
 
 /*.a__section {

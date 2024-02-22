@@ -1,9 +1,10 @@
 button.entete__button {
     background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
     font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
-    font-weight: 300;
+    font-weight: 600;
     font-style: normal;
     min-width: 10vw;
+    padding: 5px;
 
     &:hover {
         background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
@@ -14,5 +15,21 @@ button.entete__button {
     }
 }
 
+button.galerie__button {
+    background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
+    font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
+    font-weight: 600;
+    font-style: normal;
+    min-width: 10vw;
+    padding: 5px;
+
+    &:hover {
+        background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
+    }
+
+    &:active {
+        background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 40%, var(--couleur-arriere-evenement));
+    }
+}
 
 
