@@ -7,7 +7,7 @@ button.entete__button {
     padding: 5px;
 
     &:hover {
-        background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
+        background: linear-gradient(to bottom left, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
     }
 
     &:active {
@@ -24,7 +24,7 @@ button.galerie__button {
     padding: 5px;
 
     &:hover {
-        background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
+        background: linear-gradient(to bottom left, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
     }
 
     &:active {
