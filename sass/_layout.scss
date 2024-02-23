@@ -27,6 +27,19 @@ body{
     flex: 0 1 1300px;
 }
 
+@media (max-width: 500px) {
+    .global > section,
+    .global > footer {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    blockquote {
+        width: 60vw;
+    }
+}
+
 blockquote {
     isolation: auto;
     background: radial-gradient(var(--couleur-arriere-evenement) 50%, var(--couleur-arriere-accueil));
