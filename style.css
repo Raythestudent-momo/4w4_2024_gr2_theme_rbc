@@ -41,6 +41,10 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   --couleur-arriere-evenement: hsl(var(--hu2), var(--s-couleur-arriere), 70%);
   --couleur-arriere-galerie: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
   --couleur-arriere-footer: hsl(var(--hu1), var(--s-couleur-arriere), 80%);
+  --couleur-lien: black;
+  --couleur-lien-hover: rebeccapurple;
+  --couleur-lien-focus: aqua;
+  --couleur-lien-visited: rgb(50, 133, 180);
 }
 
 *,
@@ -197,19 +201,19 @@ h6 {
 }
 
 .a__section {
-  color: black;
+  color: var(--couleur-lien);
   font-size: clamp(0.25rem, -0.25rem + 3.25vw, 1.5rem);
   font-weight: 100;
   font-style: normal;
 }
 .a__section:hover {
-  color: rebeccapurple;
+  color: var(--couleur-lien-hover);
 }
 .a__section:focus {
-  color: aqua;
+  color: var(--couleur-lien-focus);
 }
 .a__section:visited {
-  color: rgb(50, 133, 180);
+  color: var(--couleur-lien-visited);
 }
 
 .vague {

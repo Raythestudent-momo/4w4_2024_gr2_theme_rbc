@@ -30,4 +30,9 @@
     --couleur-arriere-evenement : hsl(var(--hu2), var(--s-couleur-arriere), 70%);
     --couleur-arriere-galerie : hsl(var(--hu1), var(--s-couleur-arriere), 75%);
     --couleur-arriere-footer : hsl(var(--hu1), var(--s-couleur-arriere), 80%);
+
+    --couleur-lien : black;
+    --couleur-lien-hover: rebeccapurple;
+    --couleur-lien-focus: aqua;
+    --couleur-lien-visited: rgb(50, 133, 180);
 }

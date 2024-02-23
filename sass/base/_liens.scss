@@ -1,18 +1,18 @@
 .a__section {
-    color: black;
+    color: var(--couleur-lien);
     font-size: clamp(0.25rem, -0.25rem + 3.25vw, 1.5rem);
     font-weight: 100;
     font-style: normal;
 
     &:hover {
-        color : rebeccapurple;
+        color : var(--couleur-lien-hover);
     }
 
     &:focus {
-        color : aqua;
+        color : var(--couleur-lien-focus);
     }
 
     &:visited {
-        color : rgb(50, 133, 180);
+        color : var(--couleur-lien-visited);
     }
 }
