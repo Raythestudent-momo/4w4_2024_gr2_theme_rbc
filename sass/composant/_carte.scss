@@ -1,0 +1,14 @@
+.section__cours {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.carte {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 1 25%;
+    background-color: var(--couleur-arriere-evenement);
+}
