@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thème du groupe #1</title>
 
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="style.css"> -->
+
+
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css';?>">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css';?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -16,12 +19,8 @@
 <body>
     <div id="menu" class="global">
         <div class="entete__menu">
-            <div class="menu-entete-container"><ul id="menu-entete" class="menu"><li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33"><a href="http://localhost:8080/4W4_wp/2020/10/07/393-5e1-methodes-de-recherche-et-preparation-au-marche-du-travail-45h/">Méthodes de recherche</a></li>
-<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-34"><a href="http://localhost:8080/4W4_wp/2020/10/07/582-1j1-animation-et-interactivite-en-jeu-75h/">Animation en jeu</a></li>
-<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-35"><a href="http://localhost:8080/4W4_wp/2020/10/07/582-2j2creation-de-jeu-2d-60h/">jeu 2D</a></li>
-<li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-36"><a href="http://localhost:8080/4W4_wp/2020/10/07/582-3j3-creation-de-jeu-3d-75h/">jeu 3D</a></li>
-<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-37"><a href="http://localhost:8080/4W4_wp/2020/10/07/360-4j4-creation-de-jeu-en-equipe-105h/">jeu en équipe</a></li>
-</ul></div>        </div>
+            <?php wp_nav_menu(); ?>
+        </div>
     </div>
     <div id="entete" class="global">
         <header class="entete__header">
@@ -40,139 +39,35 @@
         <section>
             <h2>Accueil (h2)</h2>
                 <div class="section__cours">
-                                                                <div class="carte">
-                            <h4>582-1M1</h4>
-                            <h5> Création vidéo </h5>
-                            <p>3-2-3 2,67 unités Aucun préalable. Ce cours initie l’étudiant au…</p>
-                            <p>Durée: 75h</p>
+                    <?php
+                    /*
+                        if (have_posts()) {
+                            while (have_posts()) {
+                            the_post();
+                            the_title('<h3>', '</h3>');
+                            $contenu = get_the_content('<p>', '</p>');
+                            $contenu = wp_trim_words($contenu, 10);
+                            echo $contenu;
+                            }
+                        }
+                    */
+                    ?>
+                    <?php if (have_posts()):
+                        while (have_posts()): the_post(); 
+                        $titre = get_the_title();
+                        $sigle = substr($titre,0,7);
+                        $pos_parenthese = strpos($titre,'(');
+                        $duree = substr($titre,$pos_parenthese+1, -1);
+                        $titre = substr($titre,7,$pos_parenthese-7);
+                    ?>
+                        <div class="carte">
+                            <h4><?php echo $sigle; ?></h4>
+                            <h5><?php echo $titre; ?></h5>
+                            <p><?php echo wp_trim_words(get_the_content(), 10); ?></p>
+                            <p>Durée: <?php echo $duree; ?></p>
                         </div>
-                                                <div class="carte">
-                            <h4>582-4C2</h4>
-                            <h5> Gestion de projets multimédias </h5>
-                            <p>Ce cours initie l'étudiant aux rudiments de la gestion d’un…</p>
-                            <p>Durée: 45h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-4W4</h4>
-                            <h5> Conception d’interfaces et développement Web </h5>
-                            <p>Dans ce cours, l’étudiant poursuit son apprentissage de l’intégration de…</p>
-                            <p>Durée: 90h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-4J4</h4>
-                            <h5> Création de jeu en équipe </h5>
-                            <p>Dans ce cours qui s'appuie sur une pédagogie par projets,…</p>
-                            <p>Durée: 105h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-4PA</h4>
-                            <h5> Interfaces Web réactives et animées &#8211; Cours au choix </h5>
-                            <p>En session 4, l'étudiant doit choisir entre ce cours et…</p>
-                            <p>Durée: 75h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-4MB</h4>
-                            <h5> Animation 3D </h5>
-                            <p>En session 4, l'étudiant doit choisir entre ce cours et…</p>
-                            <p>Durée: 75h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>393-5E1</h4>
-                            <h5> Méthodes de recherche et préparation au marché du travail </h5>
-                            <p>Ce cours permet à l’étudiant d'acquérir des habiletés en recherche,…</p>
-                            <p>Durée: 45h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>350-5N1</h4>
-                            <h5> Communication et dynamique d’une équipe de travail </h5>
-                            <p>Ce cours permet à l’étudiant de développer ses habiletés en…</p>
-                            <p>Durée: 45h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-5W5</h4>
-                            <h5>	Projet Web en équipe </h5>
-                            <p>Préalable relatif : Conception d’interfaces et développement Web Dans ce…</p>
-                            <p>Durée: 105h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-5MB</h4>
-                            <h5>	Technologies émergentes et avancées – volet Création </h5>
-                            <p>En session 5, l'étudiant doit choisir entre ce cours et…</p>
-                            <p>Durée: 60h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-3J3</h4>
-                            <h5> Création de jeu 3D </h5>
-                            <p>Ce cours permet à l'étudiant d'intégrer différents types de médias…</p>
-                            <p>Durée: 75h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-3W3</h4>
-                            <h5> Création de sites Web dynamiques </h5>
-                            <p>Dans ce cours, les notions acquises dans les cours «…</p>
-                            <p>Durée: 90h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-1M2</h4>
-                            <h5> Conception graphique et imagerie matricielle </h5>
-                            <p>Ce cours initie l'étudiant aux rudiments de la conception et…</p>
-                            <p>Durée: 90h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-1W1</h4>
-                            <h5> Mise en page Web </h5>
-                            <p>Dans ce cours, l'étudiant apprend les techniques de mise en…</p>
-                            <p>Durée: 75h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-1J1</h4>
-                            <h5> Animation et interactivité en jeu </h5>
-                            <p>Ce cours est consacré aux concepts de base nécessaires à…</p>
-                            <p>Durée: 75h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-2M3</h4>
-                            <h5> Effets spéciaux et animation </h5>
-                            <p>Ce cours permet d'approfondir la formation de l’étudiant en matière…</p>
-                            <p>Durée: 60h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-2M4</h4>
-                            <h5> Conception graphique et imagerie vectorielle </h5>
-                            <p>Dans ce cours, l’étudiant poursuit l’apprentissage des notions liées à…</p>
-                            <p>Durée: 90h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-2W2</h4>
-                            <h5>	Animation et interactivité Web </h5>
-                            <p>Ce cours permet à l'étudiant d'acquérir les compétences de base…</p>
-                            <p>Durée: 75h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-2J2</h4>
-                            <h5>	Création de jeu 2D </h5>
-                            <p>Dans ce cours, l’étudiant approfondit la programmation graphique et s’initie…</p>
-                            <p>Durée: 60h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-3M5</h4>
-                            <h5>	Imagerie 3D </h5>
-                            <p>Dans ce cours, l’étudiant est initié au monde de l’imagerie…</p>
-                            <p>Durée: 75h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-3C1</h4>
-                            <h5> Design d’interactivité </h5>
-                            <p>L’étudiant apprend à concevoir des expériences interactives en plaçant les…</p>
-                            <p>Durée: 75h</p>
-                        </div>
-                                                <div class="carte">
-                            <h4>582-6N3</h4>
-                            <h5> Stage </h5>
-                            <p>Le stage en entreprise complète la formation de l’étudiant en…</p>
-                            <p>Durée: 285h</p>
-                        </div>
-                                                               
+                        <?php endwhile; ?>
+                    <?php endif; ?>                   
                 </div>
             <!-- <blockquote>
                 <p>Lorem ipsum, <a class="a__section" href="#">dolor sit amet</a>dolor sit amet consectetur adipisicing elit. Delectus, commodi dicta sapiente 

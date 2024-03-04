@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
  display : flex;
  flex-direction : column;
@@ -13,14 +18,16 @@ body{
 .global {
     display: flex;
     justify-content: center;
-    min-height : 30vh;
+    align-items: center;
+    //min-height: 30vh;
 }
 
 .global > section,
 .global > header,
-.global > footer {
+.global > footer
+.global > .entete__menu {
     flex : 0 1 1100px;
-    padding: 5rem 1rem;
+    padding: 10rem 1rem;
 }
 
 .global > header {
@@ -45,6 +52,11 @@ blockquote {
     background: radial-gradient(var(--couleur-arriere-evenement) 50%, var(--couleur-arriere-accueil));
     width: 40vw;
     padding: 5px;
+}
+
+
+#menu {
+    background-color: var(--couleur-arriere-entete);
 }
 
 #entete{

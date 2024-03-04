@@ -1,0 +1,28 @@
+.menu-entete-container { //div
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--couleur-arriere-evenement);
+    color: var(--couleur-entete);
+    z-index: 1;
+    padding: 1rem;
+    width: 100%;
+}
+
+.menu { // ul
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+.menu-item { // li
+    margin: 0 1rem;
+    padding: 0.5rem;
+}
+
+.menu-item a { // a
+    font-size: clamp(0.25rem, -0.25rem + 3.25vw, 1.5rem);
+    text-decoration: none;
+    font-style: bold;
+}

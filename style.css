@@ -1,13 +1,13 @@
 @charset "UTF-8";
 /*
-Theme Name: Theme Eddy
-Author: Eddy Martin
+Theme Name: Theme Raymond
+Author: Raymond Beauregard-Casavant
 Author URI: https://referenced.ca/
-Description: Thème de base développé dans le cours 4W4
+Description: Thème magnifique développé dans le cours 4W4
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: theme-eddy
+Text Domain: theme-raymond
 */
 /*
 https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
@@ -53,6 +53,11 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -62,14 +67,14 @@ body {
 .global {
   display: flex;
   justify-content: center;
-  min-height: 30vh;
+  align-items: center;
 }
 
 .global > section,
 .global > header,
-.global > footer {
+.global > footer .global > .entete__menu {
   flex: 0 1 1100px;
-  padding: 5rem 1rem;
+  padding: 10rem 1rem;
 }
 
 .global > header {
@@ -93,6 +98,10 @@ blockquote {
   background: radial-gradient(var(--couleur-arriere-evenement) 50%, var(--couleur-arriere-accueil));
   width: 40vw;
   padding: 5px;
+}
+
+#menu {
+  background-color: var(--couleur-arriere-entete);
 }
 
 #entete {
@@ -284,4 +293,62 @@ h6 {
 
 .sociaux > a > svg {
   fill: var(--couleur-arriere-evenement);
+}
+
+.section__cours {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.carte {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 250px;
+  background-color: var(--couleur-arriere-evenement);
+}
+
+.carte * {
+  text-align: center;
+}
+
+.menu-entete-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--couleur-arriere-evenement);
+  color: var(--couleur-entete);
+  z-index: 1;
+  padding: 1rem;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.menu-item {
+  margin: 0 1rem;
+  padding: 0.5rem;
+}
+
+.menu-item a {
+  font-size: clamp(0.25rem, -0.25rem + 3.25vw, 1.5rem);
+  text-decoration: none;
+  font-style: bold;
+}
+
+.bgc-text {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+@media screen and (min-width: 1100px) {
+  .bgc-text {
+    background-color: transparent;
+  }
 }/*# sourceMappingURL=style.css.map */
