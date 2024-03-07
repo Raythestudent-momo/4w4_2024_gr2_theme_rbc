@@ -1,39 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thème du groupe #1</title>
+<?php get_header(); ?>
 
-    <!--<link rel="stylesheet" href="normalize.css">
-        <link rel="stylesheet" href="style.css"> -->
-
-
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css';?>">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css';?>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div id="menu" class="global">
-        <div class="entete__menu">
-            <?php wp_nav_menu(); ?>
-        </div>
-    </div>
     <div id="entete" class="global">
-        <header class="entete__header">
+        <section class="entete__header">
             <h1 class="bgc-text">Thème de Raymond (h1)</h1>
             <h2 class="bgc-text">4W4 - Conception d'interface <span>et développement Web</span></h2>
             <h3 class="bgc-text">TIM - Collège de Maisonneuve</h3>
             <button class="entete__button">Événements</button>
-        </header>
-        <div class="vague">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" style="fill: var(--couleur-arriere-accueil);"></path>
-            </svg>
-        </div>
+        </section>
+        <?php get_template_part("gabarit/vague"); ?>
     </div>
     <div id="accueil" class="global">
         <section>
@@ -97,11 +71,7 @@
             </blockquote>
             <button class="galerie__button" type="button">clique-moi !</button>
         </section>
-        <div class="vague">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" style="fill: var(--couleur-arriere-footer);"></path>
-            </svg>
-        </div>
+    <?php get_template_part("gabarit/vague"); ?>
     </div>
     <div id="footer" class="global">
         <footer class="footer__section">

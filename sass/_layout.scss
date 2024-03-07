@@ -23,7 +23,6 @@ body{
 }
 
 .global > section,
-.global > header,
 .global > footer
 .global > .entete__menu {
     flex : 0 1 1100px;
@@ -82,4 +81,5 @@ blockquote {
 #footer{
     background-color: var(--couleur-arriere-footer);
     color: var(--couleur-footer);
+    min-height: 20vh;
 }

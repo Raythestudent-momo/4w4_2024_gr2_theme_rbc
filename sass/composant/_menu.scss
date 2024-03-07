@@ -1,4 +1,4 @@
-.menu-entete-container { //div
+.menu-principal-container { //nav
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,14 +6,26 @@
     color: var(--couleur-entete);
     z-index: 1;
     padding: 1rem;
-    width: 100%;
+    width: 99vw;
+    top : 0;
+    left: 0px;
+    transform: translateX(-200%);
+    transition: transform 0.5s ease-in-out;
+    @media screen and (min-width: 1100px){
+        position: relative;
+        transform: translateX(0);
+    }
 }
 
 .menu { // ul
     display: flex;
     list-style-type: none;
     justify-content: space-around;
-    width: 100vw;
+    flex-direction: column;
+    width: 100%;
+    @media screen and (min-width: 1100px){
+        flex-direction: row;
+    }
 }
 
 .menu-item { // li
@@ -25,4 +37,23 @@
     font-size: clamp(0.25rem, -0.25rem + 3.25vw, 1.5rem);
     text-decoration: none;
     font-style: bold;
+}
+
+#chk_burger {
+    display: none;
+}
+
+#burger {
+    display: block;
+    position: absolute;
+    top : 0;
+    left: 0;
+    z-index: 2;
+    @media screen and (min-width: 1100px){
+        display: none;
+    }
+}
+
+#chk_burger:checked ~ .menu-principal-container {
+    transform: translateX(0);
 }

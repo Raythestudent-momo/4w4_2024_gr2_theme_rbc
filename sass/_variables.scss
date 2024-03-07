@@ -36,3 +36,16 @@
     --couleur-lien-focus: aqua;
     --couleur-lien-visited: rgb(50, 133, 180);
 }
+
+//--_couleur-arriere-vague : hsl(var(--hu1), var(--s-couleur-arriere), 60%);
+//--_couleur-arriere-vague : hsl(var(--hu1), var(--s-couleur-arriere), 80%);
+
+
+#entete{
+    --_couleur-arriere-vague : hsl(var(--hu1), var(--s-couleur-arriere), 65%);
+}
+
+
+#galerie {
+    --_couleur-arriere-vague :var(--couleur-arriere-footer);
+}
