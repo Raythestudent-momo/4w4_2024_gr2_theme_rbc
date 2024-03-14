@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<h1>single.php</h1>
+<!-- <h1>single.php</h1> -->
     <div id="accueil" class="global">
         <section>
             <h2>Accueil (h2)</h2>

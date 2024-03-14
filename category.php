@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<!-- <h1>front-page.php</h1> -->
+<h1>category</h1>
     <div id="entete" class="global">
         <section class="entete__header">
             <h1 class="bgc-text"><?php echo get_bloginfo('name') ?></h1>
