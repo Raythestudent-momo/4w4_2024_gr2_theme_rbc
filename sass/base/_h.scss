@@ -25,12 +25,12 @@ h4{
    font-style: normal;
 }
 h5{
-   font-size: clamp(0.5rem, -0.5rem + 3.75vw, 2.25rem);
-   font-weight: 200;
-   font-style: normal;
+   font-size: clamp(0.3rem, -0.3rem + 3.75vw, 1.25rem);
+   font-weight: 500;
+   font-style: bold;
 }
 h6{
-   font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
+   font-size: clamp(0.25rem, -0.25rem + 3.25vw, 1rem);
    font-weight: 100;
    font-style: normal;
 }
