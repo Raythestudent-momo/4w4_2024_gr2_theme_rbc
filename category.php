@@ -11,8 +11,8 @@
     </div>
     <div id="accueil" class="global">
         <section>
-            <h2>Accueil (h2)</h2>
-                <div class="section__cours">
+            <h2>La catégorie :</h2>
+                <div class="section__carte">
                     <?php
                     /*
                         if (have_posts()) {
