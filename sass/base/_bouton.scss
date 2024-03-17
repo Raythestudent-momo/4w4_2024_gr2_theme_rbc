@@ -1,35 +1,26 @@
 button.entete__button {
-    background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
-    font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
-    font-weight: 600;
-    font-style: normal;
-    min-width: 10vw;
-    padding: 5px;
-
-    &:hover {
-        background: linear-gradient(to bottom left, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
-    }
-
-    &:active {
-        background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 40%, var(--couleur-arriere-evenement));
-    }
+   background-image: linear-gradient(163deg, var(--_couleur-bouton-1), var(--_couleur-bouton-2));
+   font-size: clamp(1.5rem, 0.1458rem + 4.3333vw, 3.125rem);
+   border-radius: 10px;
+   border : 2ps solid   #555;
+   padding : 16px 24px;
+   margin: 20px;
+   transition : transform .1s;
+   transform: translateY(0);
+   font-weight: 600;
+   text-align : center;
+   cursor: pointer;
+   &:hover{
+     background-image: linear-gradient(163deg, var(--_couleur-bouton-hover-1), var(--_couleur-bouton-hover-2));
+     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+     transform: translateY(-6px);
+   }
+   &:active {
+    transform: translateY(0);
+    background-image: linear-gradient(163deg, var(--_couleur-bouton-active-1), var(--_couleur-bouton-active-2));
+   }
 }
 
-button.galerie__button {
-    background: linear-gradient(to bottom right, var(--couleur-arriere-evenement) 60%, var(--couleur-arriere-accueil));
-    font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
-    font-weight: 600;
-    font-style: normal;
-    min-width: 10vw;
-    padding: 5px;
-
-    &:hover {
-        background: linear-gradient(to bottom left, var(--couleur-arriere-accueil) 60%, var(--couleur-arriere-evenement));
-    }
-
-    &:active {
-        background: linear-gradient(to bottom right, var(--couleur-arriere-accueil) 40%, var(--couleur-arriere-evenement));
-    }
-}
-
-
+/*
+https://getcssscan.com/css-buttons-examples
+*/

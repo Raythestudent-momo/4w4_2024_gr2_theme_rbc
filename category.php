@@ -1,71 +1,44 @@
+<?php 
+/**
+ *  Modèle de base pour l'affichage d'une liste d'article d'une certaine catégorie
+ */
+?>
+
 <?php get_header(); ?>
-<h1>category</h1>
-    <div id="entete" class="global">
-        <section class="entete__header">
-            <h1 class="bgc-text"><?php echo get_bloginfo('name') ?></h1>
-            <h2 class="bgc-text"><?php echo get_bloginfo('description') ?></h2>
-            <h3 class="bgc-text">TIM - Collège de Maisonneuve</h3>
-            <button class="entete__button">Événements</button>
+<h2>category</h2>
+<div id="accueil" class="global">
+        <section class="accueil__section">
+        <div class="section__cours">  
+ <?php
+
+  ?>      
+  <?php if (have_posts()):
+        while(have_posts()): the_post(); ?>
+        <div class="carte">
+            <h4><?php the_title() ?></h4>
+            <p><?php echo wp_trim_words(get_the_content(),10); ?></p>
+            <p><a href="<?php echo get_permalink(); ?>">La suite</a> </p>
+        </div>
+       <?php endwhile; ?>
+    <?php endif; ?>
+  </div>
+
+    </div>
+    <div id="galerie" class="global diagonal">
+        <section class="galerie__section">
+            <h2>Galerie  (h2)</h2>
+            <p>Lorem ipsum dolor sit amet,<a href="#">Lorem, ipsum.</a>  consectetur adipisicing elit. Minima <a href="#">Lorem, ipsum.</a>  velit qui unde odit quae, magni labore maiores facilis obcaecati dolore, ullam facere. Ducimus veniam reprehenderit, temporibus ab at possimus fugit?</p>
+            <blockquote>Galerie ipsum, dolor sit amet consectetur adipisicing elit. Accusantium a, repellat alias qui ut in ratione optio quia quae minus repudiandae ducimus aliquid aperiam unde atque tempore non. Non, magnam.</blockquote>
+        </section>
+    </div>
+    <div id="evenement" class="global">
+        <section class="evenement__section">
+            <h2>Événement</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#">Lorem, ipsum.</a>  Minima velit qui unde odit quae, <a href="#">Lorem, ipsum.</a>  magni labore maiores facilis obcaecati dolore, ullam facere. Ducimus veniam reprehenderit, temporibus ab at possimus fugit?</p>
+             <blockquote>Événement ipsum, dolor sit amet consectetur adipisicing elit. Accusantium a, repellat alias qui ut in ratione optio quia quae minus repudiandae ducimus aliquid aperiam unde atque tempore non. Non, magnam.</blockquote>
         </section>
         <?php get_template_part("gabarit/vague"); ?>
     </div>
-    <div id="accueil" class="global">
-        <section>
-            <h2>La catégorie :</h2>
-                <div class="section__carte">
-                    <?php
-                    /*
-                        if (have_posts()) {
-                            while (have_posts()) {
-                            the_post();
-                            the_title('<h3>', '</h3>');
-                            $contenu = get_the_content('<p>', '</p>');
-                            $contenu = wp_trim_words($contenu, 10);
-                            echo $contenu;
-                            }
-                        }
-                    */
-                    ?>
-                    <?php if (have_posts()):
-                        while (have_posts()): the_post();                   
-                    ?>
-                        <div class="carte">
-                            <h5><?php the_title(); ?></h5>
-                            <p><?php echo wp_trim_words(get_the_content(), 10); ?></p>
-                            <p><a href="<?php echo get_permalink(); ?>">Voir la suite</a></p>
-                        </div>
-                        <?php endwhile; ?>
-                    <?php endif; ?>                   
-                </div>
-            <!-- <blockquote>
-                <p>Lorem ipsum, <a class="a__section" href="#">dolor sit amet</a>dolor sit amet consectetur adipisicing elit. Delectus, commodi dicta sapiente 
-                    necessitatibus libero ullam magnam provident pariatur accusamus quis cumque, itaque quos natus vel possimus nisi blanditiis cupiditate nemo!
-                </p>
-            </blockquote> -->
-        </section>
-    </div>
-    <div id="evenement" class="global diagonal">
-        <section>
-            <h2>Événement (h2)</h2>
-            <blockquote>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nulla ut cum aspernatur 
-                    illum doloremque <a class="a__section" href="#">repellendus perferendis</a> voluptas architecto, minus quisquam placeat dolorum totam facilis et sit eligendi explicabo fuga.
-                </p>
-            </blockquote>
-        </section>
-    </div>
-    <div id="galerie" class="global">
-        <section>
-            <h2>Galerie (h2)</h2>
-            <blockquote>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque repellendus fugiat, 
-                    illo iusto veniam voluptatum quaerat ea cupiditate quo nemo et dolorum nihil consectetur <a class="a__section" href="#">deleniti tempore deserunt</a> aliquam voluptatem dolore.
-                </p>
-            </blockquote>
-            <button class="galerie__button" type="button">clique-moi !</button>
-        </section>
-    <?php get_template_part("gabarit/vague"); ?>
-    </div>
 
-    <?php get_footer(); ?>
+    <?php  get_footer(); ?>
+    

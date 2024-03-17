@@ -1,37 +1,40 @@
+<?php 
+/**
+ *  Modèle de base index.php 
+ */
+?>
+
 <?php get_header(); ?>
-<!-- <h1>single.php</h1> -->
-    <div id="accueil" class="global">
-        <section>
+<h2>single.php</h2>
+
+
+<div id="accueil" class="global">
+        <section class="accueil__section">
             <h2>Accueil (h2)</h2>
-                <div class="section__carte">
-                    <?php if (have_posts()):
-                        while (have_posts()): the_post();                   
-                    ?>
-                        <div class="carte">
-                            <h5><?php the_title(); ?></h5>
-                            <p><?php the_content(); ?></p>
-                        </div>
-                        <?php endwhile; ?>
-                    <?php endif; ?>                   
-                </div>
-            <!-- <blockquote>
-                <p>Lorem ipsum, <a class="a__section" href="#">dolor sit amet</a>dolor sit amet consectetur adipisicing elit. Delectus, commodi dicta sapiente 
-                    necessitatibus libero ullam magnam provident pariatur accusamus quis cumque, itaque quos natus vel possimus nisi blanditiis cupiditate nemo!
-                </p>
-            </blockquote> -->
-        </section>
+        <div class="section__cours">  
+ <?php
+
+  ?>      
+  <?php if (have_posts()):
+        while(have_posts()): the_post(); ?>
+        <div class="carte">
+            <h4><?php the_title() ?></h4>
+            <p><?php the_content(); ?></p>
+        </div>
+       <?php endwhile; ?>
+    <?php endif; ?>
+  </div>
+
     </div>
-    <div id="evenement" class="global diagonal">
-        <section>
-            <h2>Événement (h2)</h2>
-            <blockquote>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nulla ut cum aspernatur 
-                    illum doloremque <a class="a__section" href="#">repellendus perferendis</a> voluptas architecto, minus quisquam placeat dolorum totam facilis et sit eligendi explicabo fuga.
-                </p>
-            </blockquote>
+    
+    <div id="evenement" class="global">
+        <section class="evenement__section">
+            <h2>Événement</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#">Lorem, ipsum.</a>  Minima velit qui unde odit quae, <a href="#">Lorem, ipsum.</a>  magni labore maiores facilis obcaecati dolore, ullam facere. Ducimus veniam reprehenderit, temporibus ab at possimus fugit?</p>
+             <blockquote>Événement ipsum, dolor sit amet consectetur adipisicing elit. Accusantium a, repellat alias qui ut in ratione optio quia quae minus repudiandae ducimus aliquid aperiam unde atque tempore non. Non, magnam.</blockquote>
         </section>
-    </div>
-    <?php get_template_part("gabarit/vague"); ?>
+        <?php get_template_part("gabarit/vague"); ?>
     </div>
 
-    <?php get_footer(); ?>
+    <?php  get_footer(); ?>
+    

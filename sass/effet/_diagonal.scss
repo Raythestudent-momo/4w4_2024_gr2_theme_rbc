@@ -1,17 +1,16 @@
-.diagonal {
+.diagonal{
     position: relative;
-    isolation: isolate;
-}
+    isolation : isolate;
 
+}
 .diagonal::after {
     position: absolute;
-    content: "";
-    top: 0;
-    bottom: 0;
+    content : "";
+    top :0;
+    bottom : 0;
     left: 0;
-    right: 0;
-    z-index: -2;
+    right:0;
+    z-index: -1;
     transform: skewY(-5deg);
-    // background: linear-gradient(var(--couleur-arriere-accueil), var(--couleur-arriere-evenement), var(--couleur-arriere-galerie));
-    background-color: var(--couleur-arriere-evenement);
+    background-color: var(--couleur-arriere-galerie);
 }

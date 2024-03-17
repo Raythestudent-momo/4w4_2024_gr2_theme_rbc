@@ -1,9 +1,10 @@
-.sociaux {
+
+.sociaux{
     display: flex;
     justify-content: center;
     gap: 2rem;
 }
 
-.sociaux > a > svg {
-    fill: var(--couleur-arriere-evenement);
+.sociaux  svg {
+    fill : red;
 }
