@@ -1,6 +1,6 @@
 
 
-.section__cours {
+.section__carte {
     display: flex;
     flex-wrap: wrap;
     gap : 1rem;
@@ -19,4 +19,9 @@
 
 .carte *{
     text-align: center;
+}
+
+.carte .post-categories {
+    list-style-type: none;
+    display: flex;
 }

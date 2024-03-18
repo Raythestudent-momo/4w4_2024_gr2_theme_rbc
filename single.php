@@ -11,7 +11,7 @@
 <div id="accueil" class="global">
         <section class="accueil__section">
             <h2>Accueil (h2)</h2>
-        <div class="section__cours">  
+        <div class="section__carte">  
  <?php
 
   ?>      

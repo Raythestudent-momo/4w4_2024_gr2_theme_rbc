@@ -22,19 +22,9 @@
     <div id="accueil" class="global">
         <section class="accueil__section">
             <h2>Accueil (h2)</h2>
-        <div class="section__cours">  
+        <div class="section__carte">  
  <?php
-  /*
-        if (have_posts()){
-            while(have_posts()){
-                the_post();
-                the_title('<p>','</p>');
-                $contenu = get_the_content();
-                $contenu = wp_trim_words($contenu, 10);
-                echo $contenu;
-            }
-        }
-  */
+
   ?>      
   <?php if (have_posts()):
         while(have_posts()): the_post(); ?>
@@ -42,6 +32,7 @@
             <h4><?php the_title() ?></h4>
             <p><?php echo wp_trim_words(get_the_content(),10); ?></p>
             <p><a href="<?php echo get_permalink(); ?>">La suite</a> </p>
+            <?php the_category(); ?>
         </div>
        <?php endwhile; ?>
     <?php endif; ?>
