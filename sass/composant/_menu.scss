@@ -10,8 +10,17 @@
 </ul>
 </nav>
 */
+.custom-logo-link {
+  top: 0;
+  left: 0;
+  z-index: 3;
+  @media screen and (max-width: 700px) {
+    position: static;
+  }
+}
+
 .menu-principal-container { //nav
-    position: absolute;
+    position: fixed;
     top:0;
     left:50px;
     z-index: 2;
@@ -26,6 +35,10 @@
 
 #menu {
   background-color: hsl(var(--hu1),var(--s-couleur-arriere),  40%);
+  flex-wrap: wrap;
+  @media screen and (min-width:700px){
+    flex-wrap: nowrap;
+  }
 }
 
 #menu-principal{ // ul
@@ -63,13 +76,17 @@
 
 #burger {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 30px;;
   left: 30px;
   @media screen and (min-width:700px) {
     display : none;
   }
-}  
+}
+
+#burger svg {
+  color: hsl(var(--hu2),var(--s-couleur-arriere), 55%);
+}
 
 
 #chk_burger:checked ~ .menu-principal-container {

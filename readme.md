@@ -4,8 +4,9 @@
 Créer un site web pour un club de voyage qui permettra de mettre en valeur les différentes destinations de voyage
 
 ### Auteur
+Raymond Beauregard-Casavant
 ### Groupe
-
+02
 ### Description du projet:
 
 ### Liens URL:

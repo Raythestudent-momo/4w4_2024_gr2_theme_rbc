@@ -426,8 +426,19 @@ body {
 </ul>
 </nav>
 */
+.custom-logo-link {
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+@media screen and (max-width: 700px) {
+  .custom-logo-link {
+    position: static;
+  }
+}
+
 .menu-principal-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50px;
   z-index: 2;
@@ -444,6 +455,12 @@ body {
 
 #menu {
   background-color: hsl(var(--hu1), var(--s-couleur-arriere), 40%);
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 700px) {
+  #menu {
+    flex-wrap: nowrap;
+  }
 }
 
 #menu-principal {
@@ -484,7 +501,7 @@ body {
 
 #burger {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 30px;
   left: 30px;
 }
@@ -492,6 +509,10 @@ body {
   #burger {
     display: none;
   }
+}
+
+#burger svg {
+  color: hsl(var(--hu2), var(--s-couleur-arriere), 55%);
 }
 
 #chk_burger:checked ~ .menu-principal-container {
