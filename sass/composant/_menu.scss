@@ -11,16 +11,21 @@
 </nav>
 */
 .menu-principal-container { //nav
-    border :  1px solid #aaa;
     position: absolute;
     top:0;
     left:50px;
     z-index: 2;
-    transform : translateX(-200%);
+    transform : translateX(-300%);
+    transition: transform 0.5s ease-in-out;
+    padding: 10px 0 10px 0;
     @media screen and (min-width:700px) {
       position: static;
       transform : translateX(0);
 }
+}
+
+#menu {
+  background-color: hsl(var(--hu1),var(--s-couleur-arriere),  40%);
 }
 
 #menu-principal{ // ul
@@ -37,11 +42,18 @@
 
 }
 .menu-item{ //li
-
+  padding: 10px;
+  background-color: hsl(var(--hu1),var(--s-couleur-arriere),  50%);
 }
 
 .menu-item a{ //li a
-
+  color: hsl(var(--hu2),var(--s-couleur-arriere), 55%);
+  text-decoration: none;
+  font-size: 1em;
+  text-shadow: hsl(var(--hu1),var(--s-couleur-arriere),  65%) 2px 0 1px;
+  @media screen and (min-width:700px) {
+    font-size: 1.5em;
+  }
 }
 
 
@@ -52,8 +64,8 @@
 #burger {
   display: block;
   position: absolute;
-  top:0;
-  left:0;
+  top: 30px;;
+  left: 30px;
   @media screen and (min-width:700px) {
     display : none;
   }
