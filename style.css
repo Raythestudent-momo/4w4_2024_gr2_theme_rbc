@@ -111,6 +111,82 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
   --_couleur-blockquote-first-letter: hsl(var(--hu1),var(--s-couleur-arriere), 60%);
 }
 
+.clr-primaire-100 {
+  color: hsl(227, 100%, 80%);
+}
+
+.bck-primaire-100 {
+  background-color: hsl(227, 100%, 80%);
+}
+
+.clr-primaire-200 {
+  color: hsl(227, 100%, 60%);
+}
+
+.bck-primaire-200 {
+  background-color: hsl(227, 100%, 60%);
+}
+
+.clr-primaire-300 {
+  color: hsl(227, 100%, 30%);
+}
+
+.bck-primaire-300 {
+  background-color: hsl(227, 100%, 30%);
+}
+
+.clr-primaire-400 {
+  color: hsl(227, 100%, 15%);
+}
+
+.bck-primaire-400 {
+  background-color: hsl(227, 100%, 15%);
+}
+
+.clr-secondaire-100 {
+  color: hsl(47, 100%, 70%);
+}
+
+.bck-secondaire-100 {
+  background-color: hsl(47, 100%, 70%);
+}
+
+.clr-secondaire-200 {
+  color: hsl(47, 100%, 55%);
+}
+
+.bck-secondaire-200 {
+  background-color: hsl(47, 100%, 55%);
+}
+
+.clr-secondaire-300 {
+  color: hsl(47, 100%, 40%);
+}
+
+.bck-secondaire-300 {
+  background-color: hsl(47, 100%, 40%);
+}
+
+.clr-secondaire-400 {
+  color: hsl(47, 100%, 30%);
+}
+
+.bck-secondaire-400 {
+  background-color: hsl(47, 100%, 30%);
+}
+
+/* Définit la règle de style à partir d'une couleur de texte $clr et une ou plusieurs en background $bck */
+/* création de l'ensemble de règle de style d'agencement de couleurs */
+.clr-agencement-primaire {
+  color: hsl(227, 100%, 80%);
+  background-image: linear-gradient(90deg, hsl(227, 100%, 60%), hsl(227, 100%, 15%));
+}
+
+.clr-agencement-secondaire {
+  color: hsl(47, 100%, 30%);
+  background-color: hsl(47, 100%, 70%);
+}
+
 /* ////////////////////////////////////////// */
 /* Class utile                            */
 /* ////////////////////////////////////////// */
@@ -253,8 +329,6 @@ body {
 }
 
 #entete {
-  background-color: var(--_couleur-arriere);
-  color: var(--_couleur);
   position: relative;
 }
 
@@ -375,7 +449,7 @@ body {
 }
 
 .sociaux svg {
-  fill: red;
+  fill: var(--couleur-arriere-evenement);
 }
 
 .recherche {
@@ -459,7 +533,6 @@ body {
   transform: translateX(500%);
   transition: transform 0.5s ease-in-out;
   padding: 10px 0 10px 0;
-  background-color: hsl(var(--hu1), var(--s-couleur-arriere), 50%);
 }
 @media screen and (min-width: 700px) {
   .menu-principal-container {
@@ -470,7 +543,6 @@ body {
 }
 
 #menu {
-  background-color: hsl(var(--hu1), var(--s-couleur-arriere), 40%);
   flex-wrap: wrap;
 }
 @media screen and (min-width: 700px) {

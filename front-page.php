@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 <h2>Front-page.php</h2>
-<div id="entete" class="global">
+<div id="entete" class="global  clr-agencement-primaire">
         <section class="entete__header">  
                         <!-- facebook -->
 
@@ -51,6 +51,12 @@
             <h2>Événement</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#">Lorem, ipsum.</a>  Minima velit qui unde odit quae, <a href="#">Lorem, ipsum.</a>  magni labore maiores facilis obcaecati dolore, ullam facere. Ducimus veniam reprehenderit, temporibus ab at possimus fugit?</p>
              <blockquote>Événement ipsum, dolor sit amet consectetur adipisicing elit. Accusantium a, repellat alias qui ut in ratione optio quia quae minus repudiandae ducimus aliquid aperiam unde atque tempore non. Non, magnam.</blockquote>
+            <!--
+                Avec wordpress dans le fichier front-page.php, je voudrais faire afficher des cartes de catégorie. Chacune des carte contiendrait: le nom de la catégorie,
+                les 10 premiers mots de la description de la catégorie, le nombre d'article dans la catégorie et un lien vers une page category contenant une liste d'articles 
+                de cette catégorie.  
+            -->
+
         </section>
         <?php get_template_part("gabarit/vague"); ?>
     </div>

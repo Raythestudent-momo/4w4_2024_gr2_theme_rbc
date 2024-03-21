@@ -1,0 +1,158 @@
+
+/*
+https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+*/
+
+$--clr-bleu-pale   : hsl(227, 100%, 80%);
+$--clr-bleu-leger  : hsl(227, 100%, 60%);
+$--clr-bleu-moyen  : hsl(227, 100%, 30%);
+$--clr-bleu-fonce  : hsl(227, 100%, 15%);
+
+
+$--clr-jaune-pale   : hsl(47, 100%, 70%);
+$--clr-jaune-leger  : hsl(47, 100%, 55%);
+$--clr-jaune-moyen  : hsl(47, 100%, 40%);
+$--clr-jaune-fonce  : hsl(47, 100%, 30%);
+
+$defaut: (
+    primaire : (
+        100: $--clr-bleu-pale,
+        200: $--clr-bleu-leger,
+        300: $--clr-bleu-moyen,
+        400: $--clr-bleu-fonce
+    ),
+    secondaire : (
+        100: $--clr-jaune-pale,
+        200: $--clr-jaune-leger,
+        300: $--clr-jaune-moyen,
+        400: $--clr-jaune-fonce
+    )
+);
+
+ $agencement-couleur :(
+     primaire: ($--clr-bleu-pale, ($--clr-bleu-leger, $--clr-bleu-fonce)),
+     secondaire: ($--clr-jaune-fonce, $--clr-jaune-pale)
+ );
+
+:root {
+
+--nb-element : 2; // triade 
+--increment-angle : calc(360 / var(--nb-element));
+/* 360/5 = 72) */
+--angle-initial : 227;
+/* couleur arrière plan */
+--s-couleur-arriere : 100%; // saturation
+--l-couleur-arriere : 50%;  // luminosité
+/* couleur avant plan */
+--s-couleur : 100%; // saturation
+--l-couleur : 80%; // luminosité
+
+--hu1 : var(--angle-initial);
+--hu2 : calc(var(--hu1) + var(--increment-angle));
+
+--couleur-arriere-accueil: hsl(var(--hu1),var(--s-couleur-arriere),  65%);
+--couleur-arriere-galerie :  hsl(var(--hu2),var(--s-couleur-arriere), 55%);
+--couleur-arriere-evenement: hsl(var(--hu2),var(--s-couleur-arriere), 70%);
+--couleur-arriere-footer: hsl(var(--hu1),var(--s-couleur-arriere), 80%);
+
+
+}
+
+#entete {
+--_couleur-arriere: hsl(var(--hu1), var(--s-couleur-arriere), 60%);
+--_couleur: hsl(var(--hu1), var(--s-couleur-arriere), 20%);
+--_couleur-ombrage: hsl(var(--hu1), var(--s-couleur-arriere), 50%);
+
+/* Couleur du bouton */
+--_couleur-bouton-1-active : hsl(var(--hu2),var(--s-couleur-arriere), 35%);
+--_couleur-bouton-2-active : hsl(var(--hu2),var(--s-couleur-arriere), 45%);
+--_couleur-bouton-1 : hsl(var(--hu2),var(--s-couleur-arriere), 55%);
+--_couleur-bouton-2 : hsl(var(--hu2),var(--s-couleur-arriere), 65%);
+--_couleur-bouton-hover-1 : hsl(var(--hu2),var(--s-couleur-arriere), 75%);
+--_couleur-bouton-hover-2 : hsl(var(--hu2),var(--s-couleur-arriere), 80%);
+--_couleur-bouton-text : hsl(var(--hu2),var(--s-couleur-arriere), 20%);
+--_couleur-bouton-2 : hsl(var(--hu2),var(--s-couleur-arriere), 49%);
+
+--_couleur-arriere-vague : hsl(var(--hu1),var(--s-couleur-arriere),  65%);
+
+}
+
+
+#accueil{
+--_couleur-arriere: hsl(var(--hu1),var(--s-couleur-arriere),  65%);
+--_couleur: hsl(var(--hu1),var(--s-couleur-arriere),  25%);
+/* Couleur des liens */
+--_couleur-lien: hsl(var(--hu2),var(--s-couleur-arriere), 40%);
+--_couleur-lien-hover: hsl(var(--hu1),var(--s-couleur-arriere), 45%);
+--_couleur-lien-visited: hsl(var(--hu2),var(--s-couleur-arriere), 50%);
+
+
+/* Couleurs blockquote */
+--_couleur-arriere-blockquote :  hsl(var(--hu1),var(--s-couleur-arriere), 80%);
+--_couleur-blockquote :  hsl(var(--hu1),var(--s-couleur-arriere), 20%);
+--_couleur-bordure :  hsl(var(--hu1), var(--s-couleur-arriere), 70%);
+--_couleur-blockquote-first-letter :  hsl(var(--hu1),var(--s-couleur-arriere), 60%);
+}
+
+#galerie{
+--_couleur-arriere: hsl(var(--hu2),var(--s-couleur-arriere), 55%);
+--_couleur: hsl(var(--hu1),var(--s-couleur-arriere), 35%);
+
+/* Couleur des liens */
+--_couleur-lien: hsl(var(--hu2),var(--s-couleur-arriere), 50%);
+--_couleur-lien-hover: hsl(var(--hu1),var(--s-couleur-arriere), 45%);
+--_couleur-lien-visited: hsl(var(--hu2),var(--s-couleur-arriere), 40%);
+
+
+/* Couleurs blockquote */
+--_couleur-arriere-blockquote :  hsl(var(--hu1),var(--s-couleur-arriere), 80%);
+--_couleur-blockquote :  hsl(var(--hu1),var(--s-couleur-arriere), 20%);
+--_couleur-bordure :  hsl(var(--hu1), var(--s-couleur-arriere), 70%);
+--_couleur-blockquote-first-letter :  hsl(var(--hu1),var(--s-couleur-arriere), 60%);
+
+}
+
+#evenement{
+--_couleur-arriere: hsl(var(--hu2),var(--s-couleur-arriere), 40%);
+--_couleur: hsl(var(--hu1),var(--s-couleur-arriere), 30%);
+
+/* Couleur des liens */
+--_couleur-lien: hsl(var(--hu2),var(--s-couleur-arriere), 40%);
+--_couleur-lien-hover: hsl(var(--hu1),var(--s-couleur-arriere), 45%);
+--_couleur-lien-visited: hsl(var(--hu2),var(--s-couleur-arriere), 50%);
+
+
+/* Couleurs blockquote */
+--_couleur-arriere-blockquote :  hsl(var(--hu1),var(--s-couleur-arriere), 80%);
+--_couleur-blockquote :  hsl(var(--hu1),var(--s-couleur-arriere), 20%);
+--_couleur-bordure :  hsl(var(--hu1), var(--s-couleur-arriere), 70%);
+--_couleur-blockquote-first-letter :  hsl(var(--hu1),var(--s-couleur-arriere), 60%);
+
+--_couleur-arriere-vague : hsl(var(--hu1),var(--s-couleur-arriere), 80%);
+}
+
+
+
+#footer{
+
+--_couleur-arriere: hsl(var(--hu1),var(--s-couleur-arriere), 80%);
+--_couleur: hsl(var(--hu1),var(--s-couleur-arriere), 45%);
+
+/* Couleur des liens */
+--_couleur-lien: hsl(var(--hu2),var(--s-couleur-arriere), 40%);
+--_couleur-lien-hover: hsl(var(--hu1),var(--s-couleur-arriere), 45%);
+--_couleur-lien-visited: hsl(var(--hu2),var(--s-couleur-arriere), 50%);
+
+
+/* Couleurs blockquote */
+--_couleur-arriere-blockquote :  hsl(var(--hu1),var(--s-couleur-arriere), 80%);
+--_couleur-blockquote :  hsl(var(--hu1),var(--s-couleur-arriere), 20%);
+--_couleur-bordure :  hsl(var(--hu1), var(--s-couleur-arriere), 70%);
+--_couleur-blockquote-first-letter :  hsl(var(--hu1),var(--s-couleur-arriere), 60%);
+
+}
+
+
+
+
+

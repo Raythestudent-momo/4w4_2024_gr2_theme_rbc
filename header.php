@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <div id="menu" class="global">
+    <div id="menu" class="global clr-primaire-100  bck-primaire-300">
         <?php echo get_custom_logo(); ?>
         <header class="entete__menu">
             <label id="burger" for="chk_burger">
