@@ -63,7 +63,7 @@ body {
     background: linear-gradient(
             180deg, 
             var(--couleur-arriere-accueil) 50%,
-            var(--couleur-arriere-evenement) 50%);
+            hsl(var(--hu2),var(--s-couleur-arriere), 40%) 50%);
 }
 #evenement {
     background-color: var(--_couleur-arriere);

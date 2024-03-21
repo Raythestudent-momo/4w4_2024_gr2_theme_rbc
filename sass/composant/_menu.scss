@@ -14,21 +14,36 @@
   top: 0;
   left: 0;
   z-index: 3;
-  @media screen and (max-width: 700px) {
+  width: 75px;
+  height: 75px;
+  @media screen and (min-width: 700px) {
     position: static;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.custom-logo-link img {
+  width: 75px;
+  height: 75px;
+  @media screen and (min-width: 700px) {
+    width: 150px;
+    height: 150px;
   }
 }
 
 .menu-principal-container { //nav
     position: fixed;
     top:0;
-    left:50px;
+    right:0;
     z-index: 2;
-    transform : translateX(-300%);
+    transform : translateX(500%);
     transition: transform 0.5s ease-in-out;
     padding: 10px 0 10px 0;
+    background-color: hsl(var(--hu1),var(--s-couleur-arriere),  50%);
     @media screen and (min-width:700px) {
       position: static;
+      background-color: transparent;
       transform : translateX(0);
 }
 }
@@ -64,6 +79,7 @@
   text-decoration: none;
   font-size: 1em;
   text-shadow: hsl(var(--hu1),var(--s-couleur-arriere),  65%) 2px 0 1px;
+  text-align: right;
   @media screen and (min-width:700px) {
     font-size: 1.5em;
   }
@@ -77,8 +93,9 @@
 #burger {
   display: block;
   position: fixed;
-  top: 30px;;
-  left: 30px;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
   @media screen and (min-width:700px) {
     display : none;
   }

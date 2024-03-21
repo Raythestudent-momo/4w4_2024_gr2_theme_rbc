@@ -20,7 +20,7 @@ Ce thème a été développé dans le cadre du cours 4W4
 https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 */
 :root {
-  --nb-element: 3;
+  --nb-element: 2;
   --increment-angle: calc(360 / var(--nb-element));
   /* 360/5 = 72) */
   --angle-initial: 227;
@@ -32,10 +32,9 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
   --l-couleur: 80%;
   --hu1: var(--angle-initial);
   --hu2: calc(var(--hu1) + var(--increment-angle));
-  --hu3: calc(var(--hu2) + var(--increment-angle));
   --couleur-arriere-accueil: hsl(var(--hu1),var(--s-couleur-arriere), 65%);
-  --couleur-arriere-galerie: hsl(var(--hu2),var(--s-couleur-arriere), 75%);
-  --couleur-arriere-evenement: hsl(var(--hu3),var(--s-couleur-arriere), 70%);
+  --couleur-arriere-galerie: hsl(var(--hu2),var(--s-couleur-arriere), 55%);
+  --couleur-arriere-evenement: hsl(var(--hu2),var(--s-couleur-arriere), 70%);
   --couleur-arriere-footer: hsl(var(--hu1),var(--s-couleur-arriere), 80%);
 }
 
@@ -61,7 +60,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
   /* Couleur des liens */
   --_couleur-lien: hsl(var(--hu2),var(--s-couleur-arriere), 40%);
   --_couleur-lien-hover: hsl(var(--hu1),var(--s-couleur-arriere), 45%);
-  --_couleur-lien-visited: hsl(var(--hu3),var(--s-couleur-arriere), 50%);
+  --_couleur-lien-visited: hsl(var(--hu2),var(--s-couleur-arriere), 50%);
   /* Couleurs blockquote */
   --_couleur-arriere-blockquote: hsl(var(--hu1),var(--s-couleur-arriere), 80%);
   --_couleur-blockquote: hsl(var(--hu1),var(--s-couleur-arriere), 20%);
@@ -70,12 +69,12 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 }
 
 #galerie {
-  --_couleur-arriere: hsl(var(--hu2),var(--s-couleur-arriere), 75%);
-  --_couleur: hsl(var(--hu2),var(--s-couleur-arriere), 35%);
+  --_couleur-arriere: hsl(var(--hu2),var(--s-couleur-arriere), 55%);
+  --_couleur: hsl(var(--hu1),var(--s-couleur-arriere), 35%);
   /* Couleur des liens */
-  --_couleur-lien: hsl(var(--hu2),var(--s-couleur-arriere), 40%);
+  --_couleur-lien: hsl(var(--hu2),var(--s-couleur-arriere), 50%);
   --_couleur-lien-hover: hsl(var(--hu1),var(--s-couleur-arriere), 45%);
-  --_couleur-lien-visited: hsl(var(--hu3),var(--s-couleur-arriere), 50%);
+  --_couleur-lien-visited: hsl(var(--hu2),var(--s-couleur-arriere), 40%);
   /* Couleurs blockquote */
   --_couleur-arriere-blockquote: hsl(var(--hu1),var(--s-couleur-arriere), 80%);
   --_couleur-blockquote: hsl(var(--hu1),var(--s-couleur-arriere), 20%);
@@ -84,12 +83,12 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 }
 
 #evenement {
-  --_couleur-arriere: hsl(var(--hu3),var(--s-couleur-arriere), 70%);
+  --_couleur-arriere: hsl(var(--hu2),var(--s-couleur-arriere), 40%);
   --_couleur: hsl(var(--hu1),var(--s-couleur-arriere), 30%);
   /* Couleur des liens */
   --_couleur-lien: hsl(var(--hu2),var(--s-couleur-arriere), 40%);
   --_couleur-lien-hover: hsl(var(--hu1),var(--s-couleur-arriere), 45%);
-  --_couleur-lien-visited: hsl(var(--hu3),var(--s-couleur-arriere), 50%);
+  --_couleur-lien-visited: hsl(var(--hu2),var(--s-couleur-arriere), 50%);
   /* Couleurs blockquote */
   --_couleur-arriere-blockquote: hsl(var(--hu1),var(--s-couleur-arriere), 80%);
   --_couleur-blockquote: hsl(var(--hu1),var(--s-couleur-arriere), 20%);
@@ -104,7 +103,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
   /* Couleur des liens */
   --_couleur-lien: hsl(var(--hu2),var(--s-couleur-arriere), 40%);
   --_couleur-lien-hover: hsl(var(--hu1),var(--s-couleur-arriere), 45%);
-  --_couleur-lien-visited: hsl(var(--hu3),var(--s-couleur-arriere), 50%);
+  --_couleur-lien-visited: hsl(var(--hu2),var(--s-couleur-arriere), 50%);
   /* Couleurs blockquote */
   --_couleur-arriere-blockquote: hsl(var(--hu1),var(--s-couleur-arriere), 80%);
   --_couleur-blockquote: hsl(var(--hu1),var(--s-couleur-arriere), 20%);
@@ -178,7 +177,7 @@ button.entete__button {
   background-image: linear-gradient(163deg, var(--_couleur-bouton-1), var(--_couleur-bouton-2));
   font-size: clamp(1.5rem, 0.1458rem + 4.3333vw, 3.125rem);
   border-radius: 10px;
-  border: 2ps solid #555;
+  border: 2px solid #555;
   padding: 16px 24px;
   margin: 20px;
   transition: transform 0.1s;
@@ -268,7 +267,7 @@ body {
   background-color: var(--couleur-arriere-accueil);
   color: var(--_couleur);
   z-index: 1;
-  background: linear-gradient(180deg, var(--couleur-arriere-accueil) 50%, var(--couleur-arriere-evenement) 50%);
+  background: linear-gradient(180deg, var(--couleur-arriere-accueil) 50%, hsl(var(--hu2), var(--s-couleur-arriere), 40%) 50%);
 }
 
 #evenement {
@@ -430,25 +429,42 @@ body {
   top: 0;
   left: 0;
   z-index: 3;
+  width: 75px;
+  height: 75px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 700px) {
   .custom-logo-link {
     position: static;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.custom-logo-link img {
+  width: 75px;
+  height: 75px;
+}
+@media screen and (min-width: 700px) {
+  .custom-logo-link img {
+    width: 150px;
+    height: 150px;
   }
 }
 
 .menu-principal-container {
   position: fixed;
   top: 0;
-  left: 50px;
+  right: 0;
   z-index: 2;
-  transform: translateX(-300%);
+  transform: translateX(500%);
   transition: transform 0.5s ease-in-out;
   padding: 10px 0 10px 0;
+  background-color: hsl(var(--hu1), var(--s-couleur-arriere), 50%);
 }
 @media screen and (min-width: 700px) {
   .menu-principal-container {
     position: static;
+    background-color: transparent;
     transform: translateX(0);
   }
 }
@@ -488,6 +504,7 @@ body {
   text-decoration: none;
   font-size: 1em;
   text-shadow: hsl(var(--hu1), var(--s-couleur-arriere), 65%) 2px 0 1px;
+  text-align: right;
 }
 @media screen and (min-width: 700px) {
   .menu-item a {
@@ -502,8 +519,9 @@ body {
 #burger {
   display: block;
   position: fixed;
-  top: 30px;
-  left: 30px;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
 }
 @media screen and (min-width: 700px) {
   #burger {
