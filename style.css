@@ -127,6 +127,14 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
   background-color: hsl(227, 100%, 60%);
 }
 
+.clr-primaire-250 {
+  color: hsl(227, 100%, 50%);
+}
+
+.bck-primaire-250 {
+  background-color: hsl(227, 100%, 50%);
+}
+
 .clr-primaire-300 {
   color: hsl(227, 100%, 30%);
 }
@@ -179,7 +187,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 /* création de l'ensemble de règle de style d'agencement de couleurs */
 .clr-agencement-primaire {
   color: hsl(227, 100%, 80%);
-  background-image: linear-gradient(90deg, hsl(227, 100%, 60%), hsl(227, 100%, 15%));
+  background-image: linear-gradient(0deg, hsl(227, 100%, 60%), hsl(227, 100%, 15%));
 }
 
 .clr-agencement-secondaire {
@@ -532,7 +540,6 @@ body {
   z-index: 2;
   transform: translateX(500%);
   transition: transform 0.5s ease-in-out;
-  padding: 10px 0 10px 0;
 }
 @media screen and (min-width: 700px) {
   .menu-principal-container {
@@ -557,12 +564,14 @@ body {
   list-style-type: none;
   justify-content: flex-start;
   align-items: flex-start;
+  background-color: hsl(227, 100%, 50%);
 }
 @media screen and (min-width: 700px) {
   #menu-principal {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    background-color: transparent;
   }
 }
 

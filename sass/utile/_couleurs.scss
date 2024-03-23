@@ -5,6 +5,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 
 $--clr-bleu-pale   : hsl(227, 100%, 80%);
 $--clr-bleu-leger  : hsl(227, 100%, 60%);
+$--clr-bleu-saphir  : hsl(227, 100%, 50%);
 $--clr-bleu-moyen  : hsl(227, 100%, 30%);
 $--clr-bleu-fonce  : hsl(227, 100%, 15%);
 
@@ -18,6 +19,7 @@ $defaut: (
     primaire : (
         100: $--clr-bleu-pale,
         200: $--clr-bleu-leger,
+        250: $--clr-bleu-saphir,
         300: $--clr-bleu-moyen,
         400: $--clr-bleu-fonce
     ),
