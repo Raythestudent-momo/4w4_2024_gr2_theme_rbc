@@ -12,7 +12,7 @@ Création d'un site Web original pour un club de voyage présentant les destinat
 ### Liens URL:
 
 - Lien vers le serveur distant whc.ca :
-- Lien vers la Github-page de la page d'accueil : 
+- Lien vers la Github-page de la page d'accueil : https://raythestudent-momo.github.io/4w4_2024_gr2_theme_rbc/
 
 
 
