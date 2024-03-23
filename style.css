@@ -419,7 +419,7 @@ body {
   background-image: url("images/potato-150-px.png");
   background-repeat: no-repeat;
   background-position: 50% 90%;
-  background-size: content;
+  background-size: 150px;
   gap: 2rem;
 }
 
