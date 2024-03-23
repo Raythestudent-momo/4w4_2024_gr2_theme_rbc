@@ -5,9 +5,10 @@
 ?>
 
 <?php get_header(); ?>
-<h2>category</h2>
+<!-- <h2>category</h2> -->
 <div id="accueil" class="global">
         <section class="accueil__section">
+            <h2>Catégorie</h2>
         <div class="section__carte">  
  <?php
 
@@ -33,9 +34,26 @@
     </div>
     <div id="evenement" class="global">
         <section class="evenement__section">
-            <h2>Événement</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#">Lorem, ipsum.</a>  Minima velit qui unde odit quae, <a href="#">Lorem, ipsum.</a>  magni labore maiores facilis obcaecati dolore, ullam facere. Ducimus veniam reprehenderit, temporibus ab at possimus fugit?</p>
-             <blockquote>Événement ipsum, dolor sit amet consectetur adipisicing elit. Accusantium a, repellat alias qui ut in ratione optio quia quae minus repudiandae ducimus aliquid aperiam unde atque tempore non. Non, magnam.</blockquote>
+        <h2>Catégories</h2>
+            <div class="section__carte">
+            <?php
+                $categories = get_categories();
+
+                foreach ($categories as $category) {
+                    $category_link = get_category_link($category->term_id);
+                    $description = wp_trim_words($category->description, 10, '...');
+                    ?>
+
+                    <div class="carte">
+                        <h2><a href="<?php echo esc_url($category_link); ?>"><?php echo $category->name; ?></a></h2>
+                        <p><?php echo $description; ?></p>
+                        <p><?php echo $category->count . ' articles'; ?></p>
+                        <a href="<?php echo esc_url($category_link); ?>">Voir la catégorie</a>
+                    </div>
+            <?php
+            }
+            ?>
+            </div>
         </section>
         <?php get_template_part("gabarit/vague"); ?>
     </div>

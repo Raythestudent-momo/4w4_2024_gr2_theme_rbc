@@ -8,7 +8,7 @@ Raymond Beauregard-Casavant
 ### Groupe
 02
 ### Description du projet:
-Création d'un site Web pour un club de voyage présentant les destinations.
+Création d'un site Web original pour un club de voyage présentant les destinations.
 ### Liens URL:
 
 - Lien vers le serveur distant whc.ca :

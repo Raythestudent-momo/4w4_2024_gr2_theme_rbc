@@ -420,7 +420,6 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 90%;
   background-size: content;
-  text-align: center;
   gap: 2rem;
 }
 
@@ -484,6 +483,7 @@ body {
   align-items: center;
   flex: 1 0 252.5px;
   background-color: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
+  box-shadow: inset 0 0 20px hsl(47, 100%, 55%);
 }
 
 .carte * {
@@ -493,6 +493,11 @@ body {
 .carte .post-categories {
   list-style-type: none;
   display: flex;
+  background: radial-gradient(hsl(47, 100%, 55%), transparent);
+}
+
+.carte a {
+  padding: 0.5rem;
 }
 
 /*

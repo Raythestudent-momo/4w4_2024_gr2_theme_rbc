@@ -5,7 +5,7 @@
 ?>
 
 <?php get_header(); ?>
-<h2>Front-page.php</h2>
+<!-- <h2>Front-page.php</h2> -->
 <div id="entete" class="global  clr-agencement-primaire">
         <section class="entete__header">  
                         <!-- facebook -->
@@ -58,7 +58,7 @@
                     <div class="carte">
                         <h2><a href="<?php echo esc_url($category_link); ?>"><?php echo $category->name; ?></a></h2>
                         <p><?php echo $description; ?></p>
-                        <p><?php echo $category->count . 'articles'; ?></p>
+                        <p><?php echo $category->count . ' articles'; ?></p>
                         <a href="<?php echo esc_url($category_link); ?>">Voir la catégorie</a>
                     </div>
             <?php
