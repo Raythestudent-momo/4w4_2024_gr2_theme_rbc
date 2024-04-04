@@ -580,6 +580,23 @@ body {
   }
 }
 
+#menu-footer {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: hsl(227, 100%, 50%);
+}
+@media screen and (min-width: 700px) {
+  #menu-footer {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: transparent;
+  }
+}
+
 .menu-item {
   padding: 10px;
   background-color: hsl(var(--hu1), var(--s-couleur-arriere), 50%);

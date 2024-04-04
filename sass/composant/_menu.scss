@@ -70,6 +70,21 @@
  }
 
 }
+#menu-footer{ // ul
+  display : flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: $--clr-bleu-saphir;
+  @media screen and (min-width:700px) {
+   flex-direction: row;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   background-color: transparent;
+  }
+ 
+ }
 .menu-item{ //li
   padding: 10px;
   background-color: hsl(var(--hu1),var(--s-couleur-arriere),  50%);
