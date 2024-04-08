@@ -470,6 +470,10 @@ body {
   display: block;
 }
 
+.recherche__bouton {
+  background-color: var(hsl(227, 100%, 80%));
+}
+
 .section__carte {
   display: flex;
   flex-wrap: wrap;
