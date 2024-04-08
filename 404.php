@@ -8,7 +8,7 @@
 <!-- <h2>index.php</h2> -->
     <div id="accueil" class="global">
         <section class="accueil__section">
-            <h2>Oups! Cette destination se trouve dans un autre monde...</h2>
+            <h2>Oups! Cette destination se trouve dans un autre monde...cliquez sur la patate-avion pour revenir à l'accueil.</h2>
         </section>
     </div>
 <!--
