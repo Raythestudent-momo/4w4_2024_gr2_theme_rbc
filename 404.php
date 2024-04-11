@@ -8,7 +8,12 @@
 <!-- <h2>index.php</h2> -->
     <div id="accueil" class="global">
         <section class="accueil__section">
-            <h2>Oups! Cette destination se trouve dans un autre monde...cliquez sur la patate-avion pour revenir à l'accueil.</h2>
+            <h1>Erreur 404</h1>
+            <h3>Vous essayez d'accéder à une page qui n'existe pas</h3>
+            <h3>Pour revenir à la page d'accueil, cliquez sur le lien suivant</h3>
+        </section>
+        <section>
+            <img class="404__image" src="http://localhost:8080/4W4_wp/wp-content/uploads/2024/03/potato-150-px-2.png" alt="">
         </section>
     </div>
 <!--
@@ -18,4 +23,3 @@
 -->
 
     <?php  get_footer(); ?>
-    
