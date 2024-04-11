@@ -299,6 +299,18 @@ a:hover, a:active {
   outline: 0;
 }
 
+.erreur__image {
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  .erreur__image {
+    display: block;
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+  }
+}
+
 /* ////////////////////////////////////////// */
 /* règles de la pagination                             */
 /* ////////////////////////////////////////// */
