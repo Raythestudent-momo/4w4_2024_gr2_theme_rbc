@@ -3,6 +3,18 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    @media screen and (min-width: 700px){
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+}
+
+.footer > .recherche{
+    justify-content: center;
+    margin-top: 0;
 }
 
 .recherche__input{
@@ -11,5 +23,5 @@
 
 
 .recherche__bouton{
-    background-color: var($--clr-bleu-pale);
+    background-color: $--clr-bleu-pale;
 }
