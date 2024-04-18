@@ -41,7 +41,7 @@
         <section class="galerie__section">
             <h2>Galerie</h2>
             <div class="images">
-                <p>Galerie d'images en construction</p>
+                [carrousel]
             </div>
         </section>
     </div>
