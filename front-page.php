@@ -41,7 +41,7 @@
         <section class="galerie__section">
             <h2>Galerie</h2>
             <div class="images">
-                [carrousel]
+                <?php echo do_shortcode('[carrousel]') ?>
             </div>
         </section>
     </div>
