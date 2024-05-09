@@ -43,6 +43,10 @@
             <div class="images">
                 <?php echo do_shortcode('[carrousel]') ?>
             </div>
+                <?php
+				    // Appel du shortcode directement dans le fichier front-page.php
+				    echo do_shortcode('[em_destination]');
+				?>
         </section>
     </div>
     <div id="evenement" class="global">
