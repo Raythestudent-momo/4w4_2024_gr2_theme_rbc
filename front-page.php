@@ -51,25 +51,7 @@
     <div id="evenement" class="global">
         <section class="evenement__section">
             <h2>Catégories</h2>
-            <div class="section__carte">
-            <?php
-                $categories = get_categories();
-
-                foreach ($categories as $category) {
-                    $category_link = get_category_link($category->term_id);
-                    $description = wp_trim_words($category->description, 10, '...');
-                    ?>
-
-                    <div class="carte">
-                        <h2><a href="<?php echo esc_url($category_link); ?>"><?php echo $category->name; ?></a></h2>
-                        <p><?php echo $description; ?></p>
-                        <p><?php echo $category->count . ' articles'; ?></p>
-                        <a href="<?php echo esc_url($category_link); ?>">Voir la catégorie</a>
-                    </div>
-            <?php
-            }
-            ?>
-            </div>
+            <?php get_template_part("gabarit/categorie"); ?>
         </section>
 <!--
     Avec wordpress dans le fichier front-page.php, je voudrais faire afficher des cartes de catégorie. Chacune des carte contiendrait: le nom de la catégorie,
