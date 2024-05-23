@@ -12,6 +12,9 @@
             <div class="menu">
                 <?php wp_nav_menu(array("menu"=>"footer", "container"=>"nav")); ?>
             </div>
+            <div><p>collège de Maisonneuve : 3800 R. Sherbrooke E, Montréal, QC H1X 2A2</p></div>
+            <div><p>Auteur : Raymond Beauregard-Casavant<br>
+                    </p></div>
         </footer>
     </div>
     <?php wp_footer(); ?>
