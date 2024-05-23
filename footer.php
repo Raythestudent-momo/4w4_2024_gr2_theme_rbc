@@ -13,8 +13,9 @@
                 <?php wp_nav_menu(array("menu"=>"footer", "container"=>"nav")); ?>
             </div>
             <div><p>collège de Maisonneuve : 3800 R. Sherbrooke E, Montréal, QC H1X 2A2</p></div>
-            <div><p>Auteur : Raymond Beauregard-Casavant<br>
-                    </p></div>
+            <div><p>Auteur : Raymond Beauregard-Casavant</p></div>
+            <div><a href="https://github.com/Raythestudent-momo/4w4_2024_gr2_theme_rbc/tree/tp2">Dépôt Github</a></div>
+            <div><a href="https://raythestudent-momo.github.io/4w4_2024_gr2_theme_rbc/">Page Github</a></div>
         </footer>
     </div>
     <?php wp_footer(); ?>
