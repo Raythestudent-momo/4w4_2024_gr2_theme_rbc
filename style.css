@@ -1,29 +1,323 @@
 @charset "UTF-8";
 /*
-Theme Name: Theme Eddy
-Author: Eddy Martin
-Author URI: https://referenced.ca/
-Description: Thème de base développé dans le cours 4W4
+Theme Name: tp22
+Theme URI: https://referenced.ca
+Author: Raymond Beauregard-Casavant
+Author URI: https://wordpress.org/
+Description: Magnifique thème développé dans le cours 4W4
+Version: 1.0
+
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: theme-eddy
+Text Domain: theme-RBC
+Ce thème a été développé dans le cadre du cours 4W4
 */
+/* ////////////////////////////////////////// */
+/* Variables css                              */
+/* ////////////////////////////////////////// */
 /*
-https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
+https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 */
 :root {
-  --couleur-arriere-page: rgba(0, 0, 0, 0.636);
-  --couleur-arriere-entete: rgba(101, 60, 214, 0.6);
-  --couleur-arriere-accueil: rgba(55, 160, 107, 0.767);
-  --couleur-arriere-evenement: rgba(10, 20, 110, 0.651);
-  --couleur-arriere-galerie: rgba(170, 111, 43, 0.445);
-  --couleur-arriere-footer: rgba(158, 0, 0, 0.664);
-  --couleur-texte-header: rgba(190, 190, 190, 0.879);
-  --couleur-texte-sous-titre: rgba(237, 237, 237, 0.879);
-  --largeur-header: 100vw;
-  --largeur-section: 60vw;
-  --largeur-footer: 90vw;
+  --nb-element: 2;
+  --increment-angle: calc(360 / var(--nb-element));
+  /* 360/5 = 72) */
+  --angle-initial: 227;
+  /* couleur arrière plan */
+  --s-couleur-arriere: 100%;
+  --l-couleur-arriere: 50%;
+  /* couleur avant plan */
+  --s-couleur: 100%;
+  --l-couleur: 80%;
+  --hu1: var(--angle-initial);
+  --hu2: calc(var(--hu1) + var(--increment-angle));
+  --couleur-arriere-accueil: hsl(var(--hu1),var(--s-couleur-arriere), 65%);
+  --couleur-arriere-galerie: hsl(var(--hu2),var(--s-couleur-arriere), 55%);
+  --couleur-arriere-evenement: hsl(var(--hu2),var(--s-couleur-arriere), 70%);
+  --couleur-arriere-footer: hsl(var(--hu1),var(--s-couleur-arriere), 80%);
+}
+
+#entete {
+  --_couleur-arriere: hsl(var(--hu1), var(--s-couleur-arriere), 60%);
+  --_couleur: hsl(var(--hu1), var(--s-couleur-arriere), 20%);
+  --_couleur-ombrage: hsl(var(--hu1), var(--s-couleur-arriere), 50%);
+  /* Couleur du bouton */
+  --_couleur-bouton-1-active: hsl(var(--hu2),var(--s-couleur-arriere), 35%);
+  --_couleur-bouton-2-active: hsl(var(--hu2),var(--s-couleur-arriere), 45%);
+  --_couleur-bouton-1: hsl(var(--hu2),var(--s-couleur-arriere), 55%);
+  --_couleur-bouton-2: hsl(var(--hu2),var(--s-couleur-arriere), 65%);
+  --_couleur-bouton-hover-1: hsl(var(--hu2),var(--s-couleur-arriere), 75%);
+  --_couleur-bouton-hover-2: hsl(var(--hu2),var(--s-couleur-arriere), 80%);
+  --_couleur-bouton-text: hsl(var(--hu2),var(--s-couleur-arriere), 20%);
+  --_couleur-bouton-2: hsl(var(--hu2),var(--s-couleur-arriere), 49%);
+  --_couleur-arriere-vague: hsl(var(--hu1),var(--s-couleur-arriere), 65%);
+}
+
+#accueil {
+  --_couleur-arriere: hsl(var(--hu1),var(--s-couleur-arriere), 65%);
+  --_couleur: hsl(var(--hu1),var(--s-couleur-arriere), 25%);
+  /* Couleur des liens */
+  --_couleur-lien: hsl(var(--hu2),var(--s-couleur-arriere), 40%);
+  --_couleur-lien-hover: hsl(var(--hu1),var(--s-couleur-arriere), 45%);
+  --_couleur-lien-visited: hsl(var(--hu2),var(--s-couleur-arriere), 50%);
+  /* Couleurs blockquote */
+  --_couleur-arriere-blockquote: hsl(var(--hu1),var(--s-couleur-arriere), 80%);
+  --_couleur-blockquote: hsl(var(--hu1),var(--s-couleur-arriere), 20%);
+  --_couleur-bordure: hsl(var(--hu1), var(--s-couleur-arriere), 70%);
+  --_couleur-blockquote-first-letter: hsl(var(--hu1),var(--s-couleur-arriere), 60%);
+}
+
+#galerie {
+  --_couleur-arriere: hsl(var(--hu2),var(--s-couleur-arriere), 55%);
+  --_couleur: hsl(var(--hu1),var(--s-couleur-arriere), 35%);
+  /* Couleur des liens */
+  --_couleur-lien: hsl(var(--hu2),var(--s-couleur-arriere), 50%);
+  --_couleur-lien-hover: hsl(var(--hu1),var(--s-couleur-arriere), 45%);
+  --_couleur-lien-visited: hsl(var(--hu2),var(--s-couleur-arriere), 40%);
+  /* Couleurs blockquote */
+  --_couleur-arriere-blockquote: hsl(var(--hu1),var(--s-couleur-arriere), 80%);
+  --_couleur-blockquote: hsl(var(--hu1),var(--s-couleur-arriere), 20%);
+  --_couleur-bordure: hsl(var(--hu1), var(--s-couleur-arriere), 70%);
+  --_couleur-blockquote-first-letter: hsl(var(--hu1),var(--s-couleur-arriere), 60%);
+}
+
+#evenement {
+  --_couleur-arriere: hsl(var(--hu2),var(--s-couleur-arriere), 40%);
+  --_couleur: hsl(var(--hu1),var(--s-couleur-arriere), 30%);
+  /* Couleur des liens */
+  --_couleur-lien: hsl(var(--hu2),var(--s-couleur-arriere), 40%);
+  --_couleur-lien-hover: hsl(var(--hu1),var(--s-couleur-arriere), 45%);
+  --_couleur-lien-visited: hsl(var(--hu2),var(--s-couleur-arriere), 50%);
+  /* Couleurs blockquote */
+  --_couleur-arriere-blockquote: hsl(var(--hu1),var(--s-couleur-arriere), 80%);
+  --_couleur-blockquote: hsl(var(--hu1),var(--s-couleur-arriere), 20%);
+  --_couleur-bordure: hsl(var(--hu1), var(--s-couleur-arriere), 70%);
+  --_couleur-blockquote-first-letter: hsl(var(--hu1),var(--s-couleur-arriere), 60%);
+  --_couleur-arriere-vague: hsl(var(--hu1),var(--s-couleur-arriere), 80%);
+}
+
+#footer {
+  --_couleur-arriere: hsl(var(--hu1),var(--s-couleur-arriere), 80%);
+  --_couleur: hsl(var(--hu1),var(--s-couleur-arriere), 45%);
+  /* Couleur des liens */
+  --_couleur-lien: hsl(var(--hu2),var(--s-couleur-arriere), 40%);
+  --_couleur-lien-hover: hsl(var(--hu1),var(--s-couleur-arriere), 45%);
+  --_couleur-lien-visited: hsl(var(--hu2),var(--s-couleur-arriere), 50%);
+  /* Couleurs blockquote */
+  --_couleur-arriere-blockquote: hsl(var(--hu1),var(--s-couleur-arriere), 80%);
+  --_couleur-blockquote: hsl(var(--hu1),var(--s-couleur-arriere), 20%);
+  --_couleur-bordure: hsl(var(--hu1), var(--s-couleur-arriere), 70%);
+  --_couleur-blockquote-first-letter: hsl(var(--hu1),var(--s-couleur-arriere), 60%);
+}
+
+.clr-primaire-100 {
+  color: hsl(227, 100%, 80%);
+}
+
+.bck-primaire-100 {
+  background-color: hsl(227, 100%, 80%);
+}
+
+.clr-primaire-200 {
+  color: hsl(227, 100%, 60%);
+}
+
+.bck-primaire-200 {
+  background-color: hsl(227, 100%, 60%);
+}
+
+.clr-primaire-250 {
+  color: hsl(227, 100%, 50%);
+}
+
+.bck-primaire-250 {
+  background-color: hsl(227, 100%, 50%);
+}
+
+.clr-primaire-300 {
+  color: hsl(227, 100%, 30%);
+}
+
+.bck-primaire-300 {
+  background-color: hsl(227, 100%, 30%);
+}
+
+.clr-primaire-400 {
+  color: hsl(227, 100%, 15%);
+}
+
+.bck-primaire-400 {
+  background-color: hsl(227, 100%, 15%);
+}
+
+.clr-secondaire-100 {
+  color: hsl(47, 100%, 70%);
+}
+
+.bck-secondaire-100 {
+  background-color: hsl(47, 100%, 70%);
+}
+
+.clr-secondaire-200 {
+  color: hsl(47, 100%, 55%);
+}
+
+.bck-secondaire-200 {
+  background-color: hsl(47, 100%, 55%);
+}
+
+.clr-secondaire-300 {
+  color: hsl(47, 100%, 40%);
+}
+
+.bck-secondaire-300 {
+  background-color: hsl(47, 100%, 40%);
+}
+
+.clr-secondaire-400 {
+  color: hsl(47, 100%, 30%);
+}
+
+.bck-secondaire-400 {
+  background-color: hsl(47, 100%, 30%);
+}
+
+/* Définit la règle de style à partir d'une couleur de texte $clr et une ou plusieurs en background $bck */
+/* création de l'ensemble de règle de style d'agencement de couleurs */
+.clr-agencement-primaire {
+  color: hsl(227, 100%, 80%);
+  background-image: linear-gradient(0deg, hsl(227, 100%, 60%), hsl(227, 100%, 15%));
+}
+
+.clr-agencement-secondaire {
+  color: hsl(47, 100%, 30%);
+  background-color: hsl(47, 100%, 70%);
+}
+
+/* ////////////////////////////////////////// */
+/* Class utile                            */
+/* ////////////////////////////////////////// */
+.bgc-text {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px 20px;
+}
+@media screen and (min-width: 1100px) {
+  .bgc-text {
+    background-color: transparent;
+  }
+}
+
+/* ////////////////////////////////////////// */
+/* règles de base                             */
+/* ////////////////////////////////////////// */
+/*
+Sélecteur textuel de base
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
+https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjUwMHB4IiwibWF4V2lkdGgiOiI5MDBweCIsIm1pbkZvbnRTaXplIjoiMTZweCIsIm1heEZvbnRTaXplIjoiNDhweCJ9
+
+*/
+h1 {
+  font-size: clamp(1.875rem, -1.25rem + 10vw, 5.625rem);
+  text-shadow: 3px 5px 6px var(--_couleur-ombrage);
+  font-weight: bold;
+  letter-spacing: -3px;
+}
+
+h2 {
+  font-size: clamp(1.5625rem, -0.2604rem + 5.8333vw, 3.75rem);
+  font-weight: bold;
+}
+
+h3 {
+  font-size: clamp(1.4375rem, 0.0313rem + 4.5vw, 3.125rem);
+  font-weight: bold;
+}
+
+p {
+  font-size: clamp(1rem, 0.4792rem + 1.6667vw, 1.625rem);
+  line-height: 1.8rem;
+  padding: 2rem 0;
+}
+
+blockquote {
+  background-color: var(--_couleur-arriere-blockquote);
+  color: var(--_couleur-blockquote);
+  padding: 2rem;
+  width: 95%;
+  font-size: clamp(1.25rem, 0.7292rem + 1.6667vw, 1.875rem);
+  font-style: italic;
+  border-left: 10px solid var(--_couleur-bordure);
+}
+
+blockquote::first-letter {
+  font-size: clamp(1.5625rem, -0.2604rem + 5.8333vw, 3.75rem);
+  font-weight: bold;
+  color: var(--_couleur-blockquote-first-letter);
+}
+
+button.entete__button {
+  background-image: linear-gradient(163deg, var(--_couleur-bouton-1), var(--_couleur-bouton-2));
+  font-size: clamp(1.5rem, 0.1458rem + 4.3333vw, 3.125rem);
+  border-radius: 10px;
+  border: 2px solid #555;
+  padding: 16px 24px;
+  margin: 20px;
+  transition: transform 0.1s;
+  transform: translateY(0);
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+button.entete__button:hover {
+  background-image: linear-gradient(163deg, var(--_couleur-bouton-hover-1), var(--_couleur-bouton-hover-2));
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-6px);
+}
+button.entete__button:active {
+  transform: translateY(0);
+  background-image: linear-gradient(163deg, var(--_couleur-bouton-active-1), var(--_couleur-bouton-active-2));
+}
+
+/*
+https://getcssscan.com/css-buttons-examples
+*/
+a {
+  color: var(--couleur-lien);
+}
+a:visited {
+  color: var(--couleur-lien-visited);
+}
+a:hover, a:focus, a:active {
+  color: var(--couleur-lien-hover);
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover, a:active {
+  outline: 0;
+}
+
+.erreur__image {
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  .erreur__image {
+    display: block;
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+  }
+}
+
+/* ////////////////////////////////////////// */
+/* règles de la pagination                             */
+/* ////////////////////////////////////////// */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 * {
@@ -34,96 +328,349 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-family: "Titillium Web", sans-serif;
-  background-color: var(--couleur-arriere-page);
+  font-family: "prompt", Arial, Helvetica, sans-serif;
 }
 
 .global {
   display: flex;
   justify-content: center;
-  min-height: 40vh;
 }
 
 .global > section,
-.global > header,
 .global > footer {
-  flex: 0 1 1200px;
-  border: 3px ridge #9aa94c;
+  flex: 0 1 1100px;
+  padding: 10rem 1rem;
+}
+
+.entete__menu, .entete__header {
+  flex: 0 1 1500px;
+  padding: 3rem 0 0 0;
+  position: relative;
 }
 
 #entete {
-  background-color: var(--couleur-arriere-entete);
-  width: var(--largeur-header);
+  position: relative;
 }
 
 #accueil {
-  background-color: var(--couleur-arriere-accueil);
-  width: var(--largeur-section);
-}
-
-#evenement {
-  background-color: var(--couleur-arriere-evenement);
-  width: var(--largeur-section);
+  background-color: var(--_couleur-arriere);
+  color: var(--_couleur);
 }
 
 #galerie {
-  background-color: var(--couleur-arriere-galerie);
-  width: var(--largeur-section);
+  background-color: var(--couleur-arriere-accueil);
+  color: var(--_couleur);
+  z-index: 1;
+  background: linear-gradient(180deg, var(--couleur-arriere-accueil) 50%, hsl(var(--hu2), var(--s-couleur-arriere), 40%) 50%);
+}
+
+#evenement {
+  background-color: var(--_couleur-arriere);
+  color: var(--_couleur);
+  position: relative;
 }
 
 #footer {
-  background-color: var(--couleur-arriere-footer);
-  width: var(--largeur-footer);
+  background-color: var(--_couleur-arriere);
+  color: var(--_couleur);
+}
+
+.vague {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 64px;
+  transform: rotateY(180deg);
+}
+
+.remplissage {
+  fill: var(--_couleur-arriere-vague);
+}
+
+.diagonal {
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transform: skewY(-5deg);
+  background-color: var(--couleur-arriere-galerie);
+}
+
+.entete__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 3rem;
+  gap: 3rem;
+}
+
+.entete__header__texte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-image: url("images/potato-150-px.png");
+  background-repeat: no-repeat;
+  background-position: 50% 90%;
+  background-size: 150px;
+  gap: 2rem;
+}
+
+.entete__header__button {
+  text-align: center;
+  padding-bottom: 10rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 1100px) {
+  .entete__header__texte {
+    background-position: 100% 90%;
+    align-items: flex-start;
+  }
+  .entete__header__button {
+    text-align: left;
+  }
+}
+.footer__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ////////////////////////////////////////// */
+/* composants                             */
+/* ////////////////////////////////////////// */
+.sociaux {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.sociaux svg {
+  fill: var(--couleur-arriere-evenement);
+}
+
+.recherche {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+@media screen and (min-width: 700px) {
+  .recherche {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+}
+
+.footer > .recherche {
+  justify-content: center;
+  margin-top: 0;
+}
+
+#accueil > .recherche {
+  justify-content: center;
+}
+
+.recherche__input {
+  display: block;
+}
+
+.recherche__bouton {
+  background-color: hsl(227, 100%, 80%);
+}
+
+.section__carte {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.carte {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 252.5px;
+  background-color: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
+  box-shadow: inset 0 0 20px hsl(47, 100%, 55%);
+}
+
+.carte * {
+  text-align: center;
+}
+
+.carte .post-categories {
+  list-style-type: none;
+  display: flex;
+  background: radial-gradient(hsl(47, 100%, 55%), transparent);
+}
+
+.carte a {
+  padding: 0.5rem;
 }
 
 /*
-https://chrisburnell.com/clamp-calculator/
+<nav class="menu-principal-container">
+  <ul id="menu-principal" class="menu"><li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-36"><a href="http://localhost:81/4w4-2024-gr2/2020/10/07/350-5n1-communication-et-dynamique-dune-equipe-de-travail-45h/">Communication</a></li>
+  <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-37"><a href="http://localhost:81/4w4-2024-gr2/2020/10/07/393-5e1-methodes-de-recherche-et-preparation-au-marche-du-travail-45h/">Méthodes de recherche</a></li>
+  <li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-38"><a href="http://localhost:81/4w4-2024-gr2/2020/10/07/582-1j1-animation-et-interactivite-en-jeu-75h/">Animation en jeu</a></li>
+  <li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-39"><a href="http://localhost:81/4w4-2024-gr2/2020/10/07/description-du-cours-582-1m1-creation-video/">Création vidéo</a></li>
+  <li id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a href="#accueil">Accueil</a></li>
+  <li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a href="#galerie">Galerie</a></li>
+  <li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><a href="#evenement">Événement</a></li>
+</ul>
+</nav>
 */
-h1 {
-  font-size: clamp(1.5rem, -2.6rem + 13.5vw, 4rem);
-  font-weight: 600;
-  font-style: normal;
-  color: var(--couleur-texte-header);
-  padding: 2rem 1rem;
+.custom-logo-link {
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 75px;
+  height: 75px;
+}
+@media screen and (min-width: 700px) {
+  .custom-logo-link {
+    position: static;
+    width: 150px;
+    height: 150px;
+  }
 }
 
-h2 {
-  font-size: clamp(1.25rem, -1.3rem + 7.5vw, 3.75rem);
-  font-weight: 500;
-  font-style: normal;
-  color: var(--couleur-texte-sous-titre);
-  padding: 2rem 1rem;
+.custom-logo-link img {
+  width: 75px;
+  height: 75px;
+}
+@media screen and (min-width: 700px) {
+  .custom-logo-link img {
+    width: 150px;
+    height: 150px;
+  }
 }
 
-h3 {
-  font-size: clamp(1rem, -1rem + 5vw, 3rem);
-  font-weight: 400;
-  font-style: normal;
-  color: var(--couleur-texte-sous-titre);
-  padding: 2rem 1rem;
+.menu-principal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  transform: translateX(500%);
+  transition: transform 0.5s ease-in-out;
+}
+@media screen and (min-width: 700px) {
+  .menu-principal-container {
+    position: static;
+    background-color: transparent;
+    transform: translateX(0);
+  }
 }
 
-h4 {
-  font-size: clamp(0.75rem, -0.75rem + 4.25vw, 2.5rem);
-  font-weight: 300;
-  font-style: normal;
-  color: var(--couleur-texte-sous-titre);
-  padding: 2rem 1rem;
+#menu {
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 700px) {
+  #menu {
+    flex-wrap: nowrap;
+  }
 }
 
-h5 {
-  font-size: clamp(0.5rem, -0.5rem + 3.75vw, 2.25rem);
-  font-weight: 200;
-  font-style: normal;
-  color: var(--couleur-texte-sous-titre);
-  padding: 2rem 1rem;
+#menu-principal {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: hsl(227, 100%, 50%);
+}
+@media screen and (min-width: 700px) {
+  #menu-principal {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: transparent;
+  }
 }
 
-h6 {
-  font-size: clamp(0.25rem, -0.25rem + 3.25vw, 2rem);
-  font-weight: 100;
-  font-style: normal;
-  color: var(--couleur-texte-sous-titre);
-  padding: 2rem 1rem;
+#menu-footer {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: hsl(227, 100%, 50%);
+}
+@media screen and (min-width: 700px) {
+  #menu-footer {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: transparent;
+  }
+}
+
+.menu-item {
+  padding: 10px;
+  background-color: hsl(var(--hu1), var(--s-couleur-arriere), 50%);
+}
+
+.menu-item a {
+  color: hsl(var(--hu2), var(--s-couleur-arriere), 55%);
+  text-decoration: none;
+  font-size: 1em;
+  text-shadow: hsl(var(--hu1), var(--s-couleur-arriere), 65%) 2px 0 1px;
+  text-align: right;
+}
+@media screen and (min-width: 700px) {
+  .menu-item a {
+    font-size: 1.5em;
+  }
+}
+
+#chk_burger {
+  display: none;
+}
+
+#burger {
+  display: block;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+}
+@media screen and (min-width: 700px) {
+  #burger {
+    display: none;
+  }
+}
+
+#burger svg {
+  color: hsl(var(--hu2), var(--s-couleur-arriere), 55%);
+}
+
+#chk_burger:checked ~ .menu-principal-container {
+  transform: translateX(0);
 }/*# sourceMappingURL=style.css.map */

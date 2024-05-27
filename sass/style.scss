@@ -1,20 +1,56 @@
 /*
-Theme Name: Theme Eddy
-Author: Eddy Martin
-Author URI: https://referenced.ca/
-Description: Thème de base développé dans le cours 4W4
+Theme Name: tp22
+Theme URI: https://referenced.ca
+Author: Raymond Beauregard-Casavant
+Author URI: https://wordpress.org/
+Description: Magnifique thème développé dans le cours 4W4
+Version: 1.0
+
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: theme-eddy
+Text Domain: theme-RBC
+Ce thème a été développé dans le cadre du cours 4W4
 */
 
-/*
-https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
-*/
+// https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 
-@import "variables";
+/* ////////////////////////////////////////// */
+/* Variables css                              */
+/* ////////////////////////////////////////// */
+@import "utile/_couleurs";
+@import "utile/_couleurs-class";
 
+/* ////////////////////////////////////////// */
+/* Class utile                            */
+/* ////////////////////////////////////////// */
+@import "utile/local";
+
+/* ////////////////////////////////////////// */
+/* règles de base                             */
+/* ////////////////////////////////////////// */
+@import "base/h";
+@import "base/bouton";
+@import "base/lien";
+@import "base/_images";
+/* ////////////////////////////////////////// */
+/* règles de la pagination                             */
+/* ////////////////////////////////////////// */
 @import "layout";
 
-@import "base/h";
+@import "effet/vague";
+
+@import "effet/diagonal";
+
+@import "entete";
+@import "footer";
+
+/* ////////////////////////////////////////// */
+/* composants                             */
+/* ////////////////////////////////////////// */
+@import "composant/sociaux";
+@import "composant/recherche";
+@import "composant/carte";
+@import "composant/menu";
+
+

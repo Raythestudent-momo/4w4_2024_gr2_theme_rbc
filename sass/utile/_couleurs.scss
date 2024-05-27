@@ -2,6 +2,40 @@
 /*
 https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 */
+
+$--clr-bleu-pale   : hsl(227, 100%, 80%);
+$--clr-bleu-leger  : hsl(227, 100%, 60%);
+$--clr-bleu-saphir  : hsl(227, 100%, 50%);
+$--clr-bleu-moyen  : hsl(227, 100%, 30%);
+$--clr-bleu-fonce  : hsl(227, 100%, 15%);
+
+
+$--clr-jaune-pale   : hsl(47, 100%, 70%);
+$--clr-jaune-leger  : hsl(47, 100%, 55%);
+$--clr-jaune-moyen  : hsl(47, 100%, 40%);
+$--clr-jaune-fonce  : hsl(47, 100%, 30%);
+
+$defaut: (
+    primaire : (
+        100: $--clr-bleu-pale,
+        200: $--clr-bleu-leger,
+        250: $--clr-bleu-saphir,
+        300: $--clr-bleu-moyen,
+        400: $--clr-bleu-fonce
+    ),
+    secondaire : (
+        100: $--clr-jaune-pale,
+        200: $--clr-jaune-leger,
+        300: $--clr-jaune-moyen,
+        400: $--clr-jaune-fonce
+    )
+);
+
+ $agencement-couleur :(
+     primaire: ($--clr-bleu-pale, ($--clr-bleu-leger, $--clr-bleu-fonce)),
+     secondaire: ($--clr-jaune-fonce, $--clr-jaune-pale)
+ );
+
 :root {
 
 --nb-element : 2; // triade 

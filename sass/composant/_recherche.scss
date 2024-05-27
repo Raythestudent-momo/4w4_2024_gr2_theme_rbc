@@ -1,0 +1,31 @@
+.recherche{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    @media screen and (min-width: 700px){
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+}
+
+.footer > .recherche{
+    justify-content: center;
+    margin-top: 0;
+}
+
+#accueil > .recherche{
+    justify-content: center;
+}
+
+.recherche__input{
+    display: block;
+}
+
+
+.recherche__bouton{
+    background-color: $--clr-bleu-pale;
+}

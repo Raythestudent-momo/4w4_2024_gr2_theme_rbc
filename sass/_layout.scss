@@ -1,46 +1,76 @@
-* {
-    margin : 0;
-    padding: 0;
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+
 }
 
-body{
- display : flex;
- flex-direction : column;
- align-items: center;
- font-family: 'Titillium Web', sans-serif;
- background-color: var(--couleur-arriere-page);
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "prompt", Arial, Helvetica, sans-serif;
 }
 
 .global {
-    display : flex;
+    display:flex;
     justify-content: center;
-    min-height : 40vh;
+   // min-height: 30vh;
 }
 
 .global > section,
-.global > header,
-.global > footer {
-    flex : 0 1 1200px;
-    border : 3px ridge #9aa94c;
+.global > footer
+{
+    // flex : grow shrink basis
+    flex : 0 1 1100px;
+    // border : 1px solid #aaa;
+    // background-color : rgba(#000, .05 );
+    padding : 10rem 1rem;
 }
 
-#entete{
-    background-color: var(--couleur-arriere-entete);
-    width: var(--largeur-header);
+.entete__menu, .entete__header {
+  flex : 0 1 1500px;
+  padding: 3rem 0 0 0 ;
+   // min-height: 50vh;
+   position : relative;
+
 }
-#accueil{
+
+
+
+#entete {
+    // background-color: var(--_couleur-arriere);
+ 
+     //  background-image: url("images/github.png");
+     //  background-repeat: no-repeat;
+    // color : var(--_couleur);
+    position : relative;
+    // min-height: 100vh;
+
+}
+#accueil {
+    background-color: var(--_couleur-arriere);
+    color : var(--_couleur);
+}
+#galerie {
     background-color: var(--couleur-arriere-accueil);
-    width: var(--largeur-section);
+    color : var(--_couleur);
+    z-index: 1;
+    background: linear-gradient(
+            180deg, 
+            var(--couleur-arriere-accueil) 50%,
+            hsl(var(--hu2),var(--s-couleur-arriere), 40%) 50%);
 }
-#evenement{
-    background-color: var(--couleur-arriere-evenement);
-    width: var(--largeur-section);
+#evenement {
+    background-color: var(--_couleur-arriere);
+    color : var(--_couleur);
+    position : relative;
 }
-#galerie{
-    background-color: var(--couleur-arriere-galerie);
-    width: var(--largeur-section);
-}
-#footer{
-    background-color: var(--couleur-arriere-footer);
-    width: var(--largeur-footer);
+#footer {
+    background-color: var(--_couleur-arriere);
+    color : var(--_couleur);
 }

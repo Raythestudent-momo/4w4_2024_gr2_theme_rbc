@@ -1,16 +1,16 @@
-# Laboratoire #2
-## Introduction à Sass et révision HTML/CSS
+# TP2 - Club de voyage
 
-### Concevoir une page de plusieurs sections qui contient ces éléments :
- - Dossier Sass
- - normalize.css
- - style.css
+### objectifs: 
+Créer un site web pour un club de voyage qui permettra de mettre en valeur les différentes destinations de voyage
 
-À réaliser :
- - Compléter chacune des règles de style des éléments H
- - Changer les couleurs de background et des H
- - Améliorer le design général sans être trop spécifique
- - Ajouter deux variables
- - Créer plusieurs commit
- - Une github-page
- - https://raythestudent-momo.github.io/4w4_2024_gr2_theme_rbc/
+### Auteur
+Raymond Beauregard-Casavant
+### Groupe
+02
+### Description du projet:
+Création d'un site Web original pour un club de voyage présentant les destinations.
+### Liens URL:
+
+- Lien vers le serveur distant whc.ca : https://gftnth00.mywhc.ca/tim32/
+- Lien vers la Github-page de la page d'accueil : https://raythestudent-momo.github.io/4w4_2024_gr2_theme_rbc/
+.

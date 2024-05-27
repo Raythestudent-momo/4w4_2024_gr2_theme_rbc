@@ -1,0 +1,33 @@
+
+
+.section__carte {
+    display: flex;
+    flex-wrap: wrap;
+    gap : 1rem;
+}
+
+.carte {
+    //border : 1px solid #aaa;
+    padding : 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex : 1 0 calc(1010px/4);
+    background-color: hsl(var(--hu1),var(--s-couleur-arriere),  75%);
+    box-shadow: inset 0 0 20px $--clr-jaune-leger;
+}
+
+.carte *{
+    text-align: center;
+}
+
+.carte .post-categories {
+    list-style-type: none;
+    display: flex;
+    background: radial-gradient($--clr-jaune-leger, transparent);
+}
+
+.carte a {
+    padding: 0.5rem;
+}
