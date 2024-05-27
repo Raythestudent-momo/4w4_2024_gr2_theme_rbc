@@ -1,4 +1,4 @@
-# TP2 - Club de voyage (examen intra)
+# TP2 - Club de voyage
 
 ### objectifs: 
 Créer un site web pour un club de voyage qui permettra de mettre en valeur les différentes destinations de voyage
