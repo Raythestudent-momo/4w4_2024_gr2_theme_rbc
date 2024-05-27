@@ -14,8 +14,3 @@ Création d'un site Web original pour un club de voyage présentant les destinat
 - Lien vers le serveur distant whc.ca : https://gftnth00.mywhc.ca/tim32/
 - Lien vers la Github-page de la page d'accueil : https://raythestudent-momo.github.io/4w4_2024_gr2_theme_rbc/
 .
-
-
-
-
-
